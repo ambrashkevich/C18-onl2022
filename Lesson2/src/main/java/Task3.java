@@ -8,11 +8,8 @@ public class Task3 {
         System.out.println(b);
         System.out.println(sum(100, 200));
     }
-
     static int sum(int a, int b) {
 
         return a + b;
-
     }
-
 }
