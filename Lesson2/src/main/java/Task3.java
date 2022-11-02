@@ -2,10 +2,10 @@ public class Task3 {
     public static void main(String[] args) {
         //Некоторые тесты для проверки задач.
         System.out.println(sum(100, 200));
-        System.out.println(sum(Integer.MAX_VALUE, Integer.MAX_VALUE));
+        System.out.println(sum(Integer.MAX_VALUE, 23));
         System.out.println(max(56, 349));
-        System.out.println(average(new int[]{0, -2, 3, -1, 5}));
-        System.out.println(max(new int[]{1, 2, 3, 4, 5, 100, 99}));
+        System.out.println(average(new int[]{1, 2, 3, 4, 6}));
+        System.out.println(max(new int[]{-1, -2, -10, -3}));
         System.out.println(calculateHypotenuse(3, 4));
     }
 
@@ -16,7 +16,7 @@ public class Task3 {
 
 
     public static int sum(int a, int b) {
-        if ((a + b) > Integer.MAX_VALUE) {
+        if (Integer.MAX_VALUE - a < b) {
             return -1;
         } else {
             return a + b;
@@ -40,7 +40,6 @@ public class Task3 {
      * Метод должен вернуть 10
      */
     public static int max(int a, int b) {
-
         return Math.max(a, b);
     }
 
@@ -56,9 +55,9 @@ public class Task3 {
     public static double average(int[] array) {
         double average = 0;
         for (int i = 0; i < array.length; i++) {
-            average += array[i] / array.length;
+            average += array[i];
         }
-        return average;
+        return average / array.length;
     }
 
     /**
@@ -90,8 +89,7 @@ public class Task3 {
      */
 
     public static double calculateHypotenuse(int a, int b) {
-        double i = Math.sqrt(a * a + b * b);
-        return i;
+        return Math.sqrt(a * a + b * b);
     }
 }
 
