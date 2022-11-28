@@ -15,6 +15,7 @@ public class Computer {
         this.ram = ram;
         this.hdd = hdd;
         this.resource = resource;
+
     }
 
 
@@ -51,7 +52,7 @@ public class Computer {
 
     }
 
-    public void off() {
+    private void off() {
         System.out.println("Выключение компьютера");
     }
 
