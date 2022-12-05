@@ -1,4 +1,4 @@
-package Military;
+package military;
 
 public enum Sex {
     MALE,

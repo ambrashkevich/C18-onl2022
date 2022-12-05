@@ -12,7 +12,7 @@
 //    г) вывести количество призывников у которых имя Александр.
 //    5) Создать класс Main, наполнить PersonRegistry людьми, по желанию можно создавать людей через консоль
 //    */
-package Military;
+package military;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package Military;
+package military;
 
 import java.util.List;
 
