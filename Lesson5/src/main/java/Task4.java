@@ -13,7 +13,7 @@ public class Task4 {
     }
 
     private static void printSymbol(int day, int month) {
-        if ((day >= 22 && month == 11) || (day <= 20 && month == 0))
+        if ((day >= 23 && month == 11) || (day <= 20 && month == 0))
             System.out.println("Ваш знак зодиака Козерог");
         if ((day >= 21 && month == 0) || (day <= 19 && month == 1))
             System.out.println("Ваш знак зодиака Водолей");
@@ -25,17 +25,17 @@ public class Task4 {
             System.out.println("Ваш знак зодиака Телец");
         if ((day >= 22 && month == 4) || (day <= 21 && month == 5))
             System.out.println("Ваш знак зодиака Близнецы");
-        if ((day >= 22 && month == 5) || (day <= 23 && month == 6))
+        if ((day >= 22 && month == 5) || (day <= 22 && month == 6))
             System.out.println("Ваш знак зодиака Рак");
-        if ((day >= 24 && month == 6) || (day <= 23 && month == 7))
+        if ((day >= 23 && month == 6) || (day <= 21 && month == 7))
             System.out.println("Ваш знак зодиака Лев");
-        if ((day >= 24 && month == 7) || (day <= 23 && month == 8))
+        if ((day >= 22 && month == 7) || (day <= 23 && month == 8))
             System.out.println("Ваш знак зодиака Дева");
         if ((day >= 24 && month == 8) || (day <= 23 && month == 9))
             System.out.println("Ваш знак зодиака Весы");
-        if ((day >= 24 && month == 9) || (day <= 22 && month == 10))
+        if ((day >= 24 && month == 9) || (day <= 23 && month == 10))
             System.out.println("Ваш знак зодиака Скорпион");
-        if ((day >= 23 && month == 10) || (day <= 21 && month == 11))
+        if ((day >= 23 && month == 10) || (day <= 22 && month == 11))
             System.out.println("Ваш знак зодиака Стрелец");
     }
 }

@@ -6,17 +6,17 @@ public class Task7 {
         for (int i = 1; i <= 100; i++) {
             if (i % 2 != 0) value++;
         }
-        int[] Mas = new int[value];
+        int[] mas = new int[value];
         for (int i = 1, b = 0; i <= 100; i++) {
             if (i % 2 != 0) {
-                Mas[b] = i;
-                System.out.print(Mas[b] + " ");
+                mas[b] = i;
+                System.out.print(mas[b] + " ");
                 b++;
             }
         }
         System.out.println(" ");
-        for (int i = Mas.length - 1; i >= 0; i--) {
-            System.out.print(Mas[i] + " ");
+        for (int i = mas.length - 1; i >= 0; i--) {
+            System.out.print(mas[i] + " ");
         }
     }
 }

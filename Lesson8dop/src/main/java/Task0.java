@@ -1,5 +1,6 @@
 //Создайте массив строк. Заполните его произвольными именами
 //людей.
+
 import java.util.Arrays;
 
 public class Task0 {
@@ -14,8 +15,7 @@ public class Task0 {
 
                 };
         Arrays.sort(names);
-
         System.out.println(Arrays.toString(names));
-        }
     }
+}
 
