@@ -11,6 +11,9 @@ public class Main {
 
         Civil civil = new Civil();
         civil.capacityOfPassengers(23);
+
+        Passenger passenger = new Passenger();
+        passenger.carPassed("BMW",1,100,80);
     }
 
 }
