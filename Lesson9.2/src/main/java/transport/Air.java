@@ -8,6 +8,4 @@ import lombok.Setter;
 public class Air extends Transport {
     private double wingspan;
     private int runwayLength;
-
-
 }

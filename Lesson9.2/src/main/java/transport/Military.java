@@ -12,7 +12,6 @@ public class Military extends Air {
     private boolean catapult = true;
     private int numberOfMissiles = 3;
 
-
     @Override
     public String toString() {
         return "Military{" +

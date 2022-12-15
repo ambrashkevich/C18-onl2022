@@ -8,6 +8,7 @@ import lombok.Setter;
 public class Civil extends Air {
     private int numberOfPassengers = 24;
     private boolean business;
+
     @Override
     public String toString() {
         return "Civil{" +

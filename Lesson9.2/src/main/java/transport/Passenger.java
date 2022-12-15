@@ -9,7 +9,6 @@ public class Passenger extends Ground {
     private String bodyType;
     private int numberOfPassengers;
 
-
     @Override
     public String toString() {
         return "Passenger{" +

@@ -20,11 +20,9 @@ public class Car {
         if (number % 2 == 0) {
             throw new CarIsNotStarException("Car");
         } else {
-
             {
                 System.out.println("Car" + " " + getBrand() + " " + "started");
             }
-
         }
     }
 }

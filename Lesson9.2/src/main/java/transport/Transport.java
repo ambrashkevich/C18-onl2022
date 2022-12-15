@@ -13,6 +13,4 @@ public class Transport {
     private double mass;
     private String brand;
     private double kiloWats;
-
-
 }
