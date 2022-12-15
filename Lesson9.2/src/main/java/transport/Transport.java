@@ -1,13 +1,18 @@
 package transport;
 
-public class Transport {
-    int power = 5;
-   public int maxSpeed = 100;
-    double mass;
-    String brand = "BMW";
-    double kiloWats = 0.74;
+import lombok.Getter;
+import lombok.Setter;
 
-    private double calcKilowatts(){
-        return power * kiloWats;
-    }
+@Getter
+@Setter
+
+
+public class Transport {
+    private int power;
+    private int maxSpeed;
+    private double mass;
+    private String brand;
+    private double kiloWats;
+
+
 }

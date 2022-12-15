@@ -1,4 +1,4 @@
-package car;
+package task1;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package car;
+package task1;
 
 public interface Scar {
     void startcar();

@@ -10,9 +10,7 @@ public class Task1 {
     public static void main(String[] args) {
         Random random = new Random();
         int day;
-        do {
-            day = random.nextInt(8);
-        } while (day == 0);
+        day = random.nextInt(7) + 1;
         switch (day) {
             case 1 -> System.out.println("Понедельник");
             case 2 -> System.out.println("Вторник");

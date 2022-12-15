@@ -1,4 +1,4 @@
-package car;
+package task1;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,6 +16,7 @@ public class Car {
         this.engine = engine;
         this.gasTank = gasTank;
     }
+
     public void startCar() {
         if (checkFuel()) {
             engine.engineOn();
