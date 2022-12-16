@@ -1,4 +1,4 @@
-package car;
+package task1;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,10 +16,12 @@ public class Engine {
         this.enginesType = enginesType;
         this.volume = volume;
     }
-    public void engineOn(){
+
+    public void engineOn() {
         isMotorOn = true;
         System.out.println("Двигатель завёлся");
     }
+
     public void engineStop() {
         setMotorOn(false);
         System.out.println("машина заглушена");

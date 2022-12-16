@@ -1,6 +1,11 @@
 package transport;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Air extends Transport {
-    double wingspan;
-    int runwayLength;
+    private double wingspan;
+    private int runwayLength;
 }
