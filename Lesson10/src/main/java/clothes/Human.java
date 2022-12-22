@@ -6,28 +6,24 @@ import clothes.shoes.IShoes;
 
 public class Human implements IHuman {
     private String name;
-    private IJacket jacket;
-    private IPants pants;
-    private IShoes shoes;
+    private IJacket iJacket;
+    private IPants iPants;
+    private IShoes iShoes;
 
-    public Human(String name, IJacket jacket, IPants pants, IShoes shoes) {
+    public Human(String name, IJacket iJacket, IPants iPants, IShoes iShoes) {
         this.name = name;
-        this.jacket = jacket;
-        this.pants = pants;
-        this.shoes = shoes;
+        this.iJacket = iJacket;
+        this.iPants = iPants;
+        this.iShoes = iShoes;
     }
 
     @Override
-    public void PutOn() {
-        jacket.putOn();
-        pants.putOn();
-        shoes.putOn();
+    public void putOn() {
+
     }
 
     @Override
-    public void TakeOff() {
-        jacket.takeOff();
-        pants.takeOff();
-        shoes.takeOff();
+    public void takeOff() {
+
     }
 }

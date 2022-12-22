@@ -1,4 +1,5 @@
 package clothes;
+
 import clothes.jacket.GucciJacket;
 import clothes.jacket.NikeJacket;
 import clothes.jacket.PumaJacket;
@@ -29,20 +30,17 @@ public class Main {
          * - одеться(вызываются методы надетьдеть у всех вещей)
          * - раздеться (вызываются методы снять у всех вещей)
          */
-        Human human1 = new Human("Vadim",new PumaJacket(),new GucciPants(),new GucciShoes());
-        human1.PutOn();
-        human1.TakeOff();
+        Human human1 = new Human("Vadim", new PumaJacket(), new GucciPants(), new GucciShoes());
+        human1.putOn();
+        human1.takeOff();
         System.out.println("                                                         ");
-
-        Human human2 = new Human("Max",new NikeJacket(),new PumaPants(),new NikeShoes());
-        human1.PutOn();
-        human1.TakeOff();
+        Human human2 = new Human("Max", new NikeJacket(), new PumaPants(), new NikeShoes());
+        human1.putOn();
+        human1.takeOff();
         System.out.println("                                                         ");
-
-        Human human3 = new Human("Alex",new GucciJacket(),new NikePants(),new PumaShoes());
-        human1.PutOn();
-        human1.TakeOff();
+        Human human3 = new Human("Alex", new GucciJacket(), new NikePants(), new PumaShoes());
+        human1.putOn();
+        human1.takeOff();
         System.out.println("                                                         ");
-
     }
 }
