@@ -1,8 +1,8 @@
 package clothes;
 
 public interface IHuman {
-    void PutOn();
+    void putOn();
 
-    void TakeOff();
+    void takeOff();
 
 }
