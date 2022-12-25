@@ -19,7 +19,9 @@ public class Human implements IHuman {
 
     @Override
     public void putOn() {
-
+        iJacket.putOn();
+        iPants.putOn();
+        iShoes.putOn();
     }
 
     @Override
