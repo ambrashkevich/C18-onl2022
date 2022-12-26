@@ -2,7 +2,6 @@
 <h3 align="center" >Hello, my name is Vadim </h3>
 <h4 align="center">Topics covered and what I learned</h4>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=IntelliJ IDEA loading......)](https://git.io/typing-svg)
 
 [![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/trossp)
 
