@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Car {
     private final Engine engine;
-    private GasTank gasTank;
+    private final GasTank gasTank;
     private double countAllDistance;
 
     public Car(Engine engine, GasTank gasTank) {
