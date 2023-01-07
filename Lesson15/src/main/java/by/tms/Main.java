@@ -12,9 +12,9 @@ public class Main {
         {
             //В исходном файле hw1/blackList.txt находятся слова, каждое слово на новой строке.
             //После запуска программы должен создать файл output.txt, который будет содержать в себе только палиндромы.
-            try (FileInputStream fis = new FileInputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task1\\input.txt");
+            try (FileInputStream fis = new FileInputStream("Lesson15/src/main/java/by/tms/task1/input.txt");
                  //Считываем с файла
-                 FileOutputStream fos = new FileOutputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task1\\output.txt");
+                 FileOutputStream fos = new FileOutputStream("Lesson15/src/main/java/by/tms/task1/output.txt");
                  //Запись в новый файл
                  PrintStream printStream = new PrintStream(fos)) {
                 byte[] buffer = new byte[fis.available()];
@@ -23,10 +23,10 @@ public class Main {
                 String inputText = new String(buffer);
                 String[] array = inputText.split("\\s|\\n|\\d+");
                 for (String s : array) {
-                    String sLowerCase = s.trim();
-                    StringBuilder stringBuilder = new StringBuilder(sLowerCase);
+                    String changedString = s.trim();
+                    StringBuilder stringBuilder = new StringBuilder(changedString);
                     StringBuilder reverse = stringBuilder.reverse();
-                    if ((reverse.toString()).equalsIgnoreCase(sLowerCase) && s.length() > 0) {
+                    if ((reverse.toString()).equalsIgnoreCase(changedString) && s.length() > 0) {
                         printStream.println(s);
                     }
                 }
@@ -48,8 +48,8 @@ public class Main {
         }
         TextFormatter textFormatter = new TextFormatter();
         {
-            try (FileInputStream fis = new FileInputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task2\\input.txt");
-                 FileOutputStream fos = new FileOutputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task2\\output.txt");
+            try (FileInputStream fis = new FileInputStream("Lesson15/src/main/java/by/tms/task2/input.txt");
+                 FileOutputStream fos = new FileOutputStream("Lesson15/src/main/java/by/tms/task2/output.txt");
                  PrintStream printStream = new PrintStream(fos)) {
                 byte[] buffer = new byte[fis.available()];
                 fis.read(buffer);
@@ -74,8 +74,8 @@ public class Main {
          * Если нет, то выводите соответствующее сообщение, кол-во предложений не прошедших проверку и сами предложения подлежащие исправлению.
          */
         {
-            try (FileInputStream fisList = new FileInputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task3\\text.txt");
-                 FileInputStream fisCheck = new FileInputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task3\\blackList.txt")) {
+            try (FileInputStream fisList = new FileInputStream("Lesson15/src/main/java/by/tms/task1/text.txt");
+                 FileInputStream fisCheck = new FileInputStream("Lesson15/src/main/java/by/tms/task1/blacklist.txt")) {
                 byte[] buffer = new byte[fisList.available()];
                 fisList.read(buffer);
                 String text = new String(buffer).replaceAll("\\n", "");
@@ -108,8 +108,8 @@ public class Main {
          * После сериализации произвести обратный процесс(из потока в объект) и вывести на консоль
          */
         {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task4\\service\\car.dat"));
-                 ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson15\\src\\main\\java\\by\\tms\\task4\\service\\car.dat"))) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Lesson15/src/main/java/by/tms/task4/service/car.dat"));
+                 ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Lesson15/src/main/java/by/tms/task4/service/car.dat"))) {
                 Car car = new Car("bmw", new Engine("1.9 tdi", 4), new GasTank(100, "diesel"), 200, 15000);
                 oos.writeObject(car);
                 Car bmw = (Car) ois.readObject();
