@@ -2,6 +2,7 @@ package tms.example;
 
 import by.tms.task2.model.Animal;
 import by.tms.task2.model.Generics;
+import by.tms.task4.Calculator;
 
 import java.io.File;
 
@@ -32,6 +33,15 @@ public class Main {
          * Массив является переменной класса. Массив должен передаваться в класс через конструктор.
          * Написать метод принимающий MinMax объект и печатающий информацию об элементах.
          */
+
+        /**
+         * 4) Написать класс Калькулятор (необобщенный), который содержит обобщенные статические методы - sum, multiply, divide,
+         * subtraction. Параметры этих методов - два числа разного типа, над которыми должна быть произведена операция.
+         */
+        System.out.println(Calculator.sum(5, 5));
+        System.out.println(Calculator.multiply(5, 5));
+        System.out.println(Calculator.divide(5, 5));
+        System.out.println(Calculator.subtraction(5, 5));
     }
 
     public static void readFiles(File baseDirectory) {
