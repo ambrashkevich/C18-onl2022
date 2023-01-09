@@ -16,21 +16,22 @@ public class Shop {
         this.products = products;
     }
 
+    public boolean add(Product product) {
+        return getProducts().add(product);
+
+    }
+
     public void delete(long id) {
         Iterator<Product> iterator = getProducts().iterator();
         while (iterator.hasNext()) {
             Product productFromDelete = iterator.next();
             if (id == productFromDelete.getId()) {
                 iterator.remove();
-                return;
+                break;
             }
         }
     }
 
-    public boolean add(Product product) {
-        return getProducts().add(product);
-
-    }
 
     public void editProduct(Product pr) {
         products.remove(products.size() - 1);
