@@ -1,4 +1,5 @@
 import java.text.ParseException;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 
 public class Task1 {
@@ -9,7 +10,7 @@ public class Task1 {
          * введенной дате.
          */
         LocalDate localDate = LocalDate.of(2023, 1, 5);
-        java.time.DayOfWeek dayOfWeek = localDate.getDayOfWeek();
+        DayOfWeek dayOfWeek = localDate.getDayOfWeek();
         System.out.println("Day :" + " " + dayOfWeek);
     }
 }

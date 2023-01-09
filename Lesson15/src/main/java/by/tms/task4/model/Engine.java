@@ -12,5 +12,5 @@ import java.io.Serializable;
 
 public class Engine implements Serializable {
     private String engineType;
-    private int valueOfCelyndr;
+    private int countCylinders;
 }
