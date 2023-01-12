@@ -8,6 +8,7 @@ public class Task2 {
  * 2. Написать программу для вывода на экран дату следующего вторника.
  */
         LocalDate date = LocalDate.now();
+
         System.out.println("\nСледующий вторник: " + date.with(TemporalAdjusters.next(DayOfWeek.TUESDAY)));
         System.out.println("Предыдущий вторник: " + date.with(TemporalAdjusters.previous(DayOfWeek.TUESDAY)) + "\n");
     }
