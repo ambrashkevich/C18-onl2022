@@ -1,17 +1,16 @@
 import by.tms.model.Car;
-import by.tms.model.Person;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-
-public class Task1 {
-
+public class Main {
     public static void main(String[] args) {
-
         //  1) Вывести список чисел, умноженных на 2. Список чисел задаем рандомно.
         int size = 10;
         int min = 1;
@@ -21,23 +20,24 @@ public class Task1 {
         for (Integer i : randList) {
             System.out.println(i * 2);
         }
-
         System.out.println(randList);
+
+
         // 2) Определение количества четных чисел в потоке данных.
         //     * Создаем коллекцию Set<Integer> в которую добавляем рандомно 50 чисел от 0 до 100
-//        ArrayList<Integer> arrayList = new ArrayList<>();
-//        int number;
-//        Random random = new Random();
-//        for (int i = 0; i < 50; i++) {
-//            number = random.nextInt() % 100;
-//            arrayList.add(number);
-//        }
-//        Stream<Integer> st = arrayList.stream();
-//        Predicate<Integer> fn;
-//        fn = (n) -> (n % 2) == 0;
-//        Stream<Integer> resStream = st.filter(fn);
-//        System.out.println(arrayList);
-//        System.out.println("n = " + resStream.count());
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        int number;
+        Random random = new Random();
+        for (int i = 0; i < 10; i++) {
+            number = random.nextInt() % 100;
+            arrayList.add(number);
+        }
+        Stream<Integer> st = arrayList.stream();
+        Predicate<Integer> fn;
+        fn = (n) -> (n % 2) == 0;
+        Stream<Integer> resStream = st.filter(fn);
+        System.out.println(arrayList);
+        System.out.println("n = " + resStream.count());
 
         //3) Вывести список имен, но с первой заглавной буквой. список имен: "john", "arya", "sansa"
         List<String> names = Arrays.asList("john", "arya", "sansa");
@@ -45,7 +45,7 @@ public class Task1 {
                 .map(StringUtils::capitalize)
                 .forEach(System.out::println);
 
-        // Создаем класс Car с полями number (номер авто) и year (год выпуска).
+        //4) Создаем класс Car с полями number (номер авто) и year (год выпуска).
         //Необходимо вывести все не пустые номера машин, выпущенных после 2010 года
         List<Car> cars = Arrays.asList(
                 new Car("AA1111BX", 2007),
@@ -59,14 +59,6 @@ public class Task1 {
                 .filter(s -> s != null && !s.isEmpty())
                 .forEach(System.out::println);
     }
-
-    List<Person> people = Arrays.asList(
-            new Person("Вадим", "Амбрашкевич", 21),
-            new Person("Иван", "Девелопер", 21),
-            new Person("Антон", "Дмитриев", 21),
-            new Person("Дмитрий", "Дианов", 21));
-
-
 }
 
 
