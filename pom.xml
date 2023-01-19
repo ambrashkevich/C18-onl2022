@@ -32,6 +32,18 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.31</version>
+        </dependency>
     </dependencies>
 
 
@@ -58,5 +70,6 @@
         <module>Lesson19</module>
         <module>Lesson20add</module>
         <module>Lesson20</module>
+        <module>Lesson21</module>
     </modules>
 </project>
