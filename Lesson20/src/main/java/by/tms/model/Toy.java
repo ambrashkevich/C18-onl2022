@@ -12,7 +12,6 @@ public class Toy {
     public Toy(String name, int cost) {
         this.name = name;
         this.cost = cost;
-
     }
 
     @Override

@@ -8,10 +8,10 @@ import java.util.List;
 
 public class CRUDUtils {
 
-    private static final String GET_ALL_STUDENTS_QUERY = "SELECT * FROM students_db.students";
-    private static final String INSERT_STUDENT_QUERY = "INSERT INTO students(name, surname, course) VALUES(?, ?, ?);";
-    private static final String UPDATE_STUDENT_QUERY = "UPDATE students SET course = ? WHERE id = ?;";
-    private static final String DELETE_STUDENT_QUERY = "DELETE FROM students WHERE id = ?";
+    private static final String GET_ALL_STUDENTS_QUERY = "SELECT * FROM Students";
+    private static final String INSERT_STUDENT_QUERY = "INSERT INTO Students(firstname, lastname,age) VALUES(?, ?, ?);";
+    private static final String UPDATE_STUDENT_QUERY = "UPDATE Students SET course = ? WHERE id = ?;";
+    private static final String DELETE_STUDENT_QUERY = "DELETE FROM Students WHERE id = ?";
 
     public static List<Student> getAllStudents() {
         List<Student> students = new ArrayList<>();
@@ -21,11 +21,10 @@ public class CRUDUtils {
             ResultSet rs = statement.executeQuery(GET_ALL_STUDENTS_QUERY);
             while (rs.next()) {
                 int id = rs.getInt("id");
-                String name = rs.getString("name");
-                String surname = rs.getString("surname");
+                String firstName = rs.getString("FirstName");
+                String lastName = rs.getString("LastName");
                 int age = rs.getInt("age");
-                int course = rs.getInt("course");
-                students.add(new Student(id, name, surname, age, course));
+                students.add(new Student(id, firstName, lastName, age));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -39,9 +38,9 @@ public class CRUDUtils {
 
         try (Connection connection = DbUtils.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_STUDENT_QUERY);
-            preparedStatement.setString(1, student.getName());
-            preparedStatement.setString(2, student.getSurname());
-            preparedStatement.setInt(3, student.getCourse());
+            preparedStatement.setString(1, student.getFirstName());
+            preparedStatement.setString(2, student.getLastName());
+            preparedStatement.setInt(3, student.getAge());
             preparedStatement.executeUpdate();
 
             updatedStudents = getAllStudents();
@@ -53,7 +52,7 @@ public class CRUDUtils {
         return updatedStudents;
     }
 
-    public static List<Student> updateStudent(int studentId, int course) {
+    public static List<Student> addStudent(int studentId, int course) {
         List<Student> updatedStudents = new ArrayList<>();
 
         try (Connection connection = DbUtils.getConnection()) {

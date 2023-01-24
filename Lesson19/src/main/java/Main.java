@@ -22,7 +22,6 @@ public class Main {
         }
         System.out.println(randList);
 
-
         // 2) Определение количества четных чисел в потоке данных.
         //     * Создаем коллекцию Set<Integer> в которую добавляем рандомно 50 чисел от 0 до 100
         ArrayList<Integer> arrayList = new ArrayList<>();

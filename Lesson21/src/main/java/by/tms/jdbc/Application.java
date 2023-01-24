@@ -5,7 +5,7 @@ import by.tms.jdbc.utils.CRUDUtils;
 
 public class Application {
     public static void main(String[] args) throws InterruptedException {
-        Student student = new Student("Ivan", "Ivanov", 5, 2);
+        Student student = new Student(1, "Ivanov", "Ivanovich", 3);
         System.out.println("Saved students:");
         System.out.println(CRUDUtils.saveStudent(student));
         System.out.println("---------------------------------------------------");
@@ -20,7 +20,7 @@ public class Application {
         System.out.println("---------------------------------------------------");
 
         System.out.println("Updated students:");
-        System.out.println(CRUDUtils.updateStudent(1, 3));
+        System.out.println(CRUDUtils.addStudent(1, 3));
         System.out.println("----------------------------------------------------");
 
         System.out.println("Deleted students: ");

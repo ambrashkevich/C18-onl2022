@@ -11,15 +11,10 @@ import java.util.Comparator;
 @Setter
 @AllArgsConstructor
 @ToString
-public class Book implements Comparable<Book> {
+public class Book {
     private String author;
     private String name;
     private int year;
-
-    @Override
-    public int compareTo(Book o1) {
-        return this.getYear() > o1.getYear() ? 1 : 0;
-    }
 
     public static class BookComparator implements Comparator<Book> {
         @Override
