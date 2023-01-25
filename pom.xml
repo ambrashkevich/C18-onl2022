@@ -72,5 +72,7 @@
         <module>Lesson20</module>
         <module>Lesson21</module>
         <module>Lesson22</module>
+        <module>Lesson24</module>
+        <module>Lesson24web</module>
     </modules>
 </project>
