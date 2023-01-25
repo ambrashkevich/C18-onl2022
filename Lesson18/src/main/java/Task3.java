@@ -1,3 +1,5 @@
+import by.tms.model.FunctionalInterface;
+
 import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.stream.IntStream;
