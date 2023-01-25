@@ -21,18 +21,27 @@ public class Task4 {
         printByName(category);
         System.out.println("--------------------");
         printByRating(category);
-
     }
 
     private static void printByCost(Category category) {
-        category.getProductSet().stream().sorted(new Product.ProductCostComparator()).forEach(System.out::println);
+        category.getProductSet()
+                .stream()
+//                .sorted(Comparator.comparing(Product::getCost))
+                .sorted(new Product.ProductCostComparator())
+                .forEach(System.out::println);
     }
 
     private static void printByName(Category category) {
-        category.getProductSet().stream().sorted(Comparator.comparing(Product::getName)).forEach(System.out::println);
+        category.getProductSet()
+                .stream()
+                .sorted(Comparator.comparing(Product::getName))
+                .forEach(System.out::println);
     }
 
     private static void printByRating(Category category) {
-        category.getProductSet().stream().sorted(Comparator.comparing(Product::getRating)).forEach(System.out::println);
+        category.getProductSet()
+                .stream()
+                .sorted(Comparator.comparing(Product::getRating))
+                .forEach(System.out::println);
     }
 }
