@@ -12,6 +12,7 @@ public class CRUDUtils {
     private static final String INSERT_STUDENT_QUERY = "INSERT INTO Students(firstname, lastname,age) VALUES(?, ?, ?);";
     private static final String UPDATE_STUDENT_QUERY = "UPDATE Students SET course = ? WHERE id = ?;";
     private static final String DELETE_STUDENT_QUERY = "DELETE FROM Students WHERE id = ?";
+    private static final String SELECT_ALL_STUDENT_WITH_CITY = "SELECT * FROM STUDENTS LEFT JOIN CITY ON STUDENTS.ID = CITY.ID";
 
     public static List<Student> getAllStudents() {
         List<Student> students = new ArrayList<>();
@@ -52,13 +53,12 @@ public class CRUDUtils {
         return updatedStudents;
     }
 
-    public static List<Student> addStudent(int studentId, int course) {
+    public static List<Student> addStudent(int studentId) {
         List<Student> updatedStudents = new ArrayList<>();
 
         try (Connection connection = DbUtils.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_STUDENT_QUERY);
-            preparedStatement.setInt(1, course);
-            preparedStatement.setInt(2, studentId);
+            preparedStatement.setInt(1, studentId);
             preparedStatement.executeUpdate();
 
             updatedStudents = getAllStudents();
@@ -87,5 +87,27 @@ public class CRUDUtils {
         return updatedStudents;
     }
 
+    public static List<Student> getAllStudentsWitchCity() {
+        List<Student> studentsCity = new ArrayList<>();
+        try (Connection connection = DbUtils.getConnection()) {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SELECT_ALL_STUDENT_WITH_CITY);
+            while (resultSet.next()) {
+                System.out.print(resultSet.getInt(1) + " ");
+                System.out.print(resultSet.getString(2) + " ");
+                System.out.print(resultSet.getString(3) + " ");
+                System.out.print(resultSet.getInt(4) + " ");
+                System.out.print(resultSet.getString(5) + " ");
+                System.out.print(resultSet.getString(6) + " ");
+                System.out.print(resultSet.getString(7) + " ");
+                System.out.println();
 
+            }
+
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return studentsCity;
+    }
 }
