@@ -21,7 +21,6 @@ public class DbUtils {
             System.out.println(DB_PASSWORD);
             System.out.println(DB_USERNAME);
             connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-
         } catch (SQLException e) {
             System.out.println("Exception " + e.getMessage());
         }

@@ -43,13 +43,11 @@ public class CRUDUtils {
             preparedStatement.setString(2, student.getLastName());
             preparedStatement.setInt(3, student.getAge());
             preparedStatement.executeUpdate();
-
             updatedStudents = getAllStudents();
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
         return updatedStudents;
     }
 
@@ -60,30 +58,25 @@ public class CRUDUtils {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_STUDENT_QUERY);
             preparedStatement.setInt(1, studentId);
             preparedStatement.executeUpdate();
-
             updatedStudents = getAllStudents();
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
         return updatedStudents;
     }
 
     public static List<Student> deleteStudent(int studentId) {
         List<Student> updatedStudents = new ArrayList<>();
-
         try (Connection connection = DbUtils.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_STUDENT_QUERY);
             preparedStatement.setInt(1, studentId);
             preparedStatement.execute();
-
             updatedStudents = getAllStudents();
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
         return updatedStudents;
     }
 
@@ -101,10 +94,7 @@ public class CRUDUtils {
                 System.out.print(resultSet.getString(6) + " ");
                 System.out.print(resultSet.getString(7) + " ");
                 System.out.println();
-
             }
-
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

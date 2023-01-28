@@ -11,7 +11,6 @@ public class CityUtils {
     private static final String INSERT_CITY_QUERY = "INSERT INTO City(id,namecity, description) VALUES(?, ?,?);";
     private static final String DELETE_CITY_QUERY = "DELETE FROM City WHERE id = ?";
 
-
     public static List<City> getAllCity() {
         List<City> cities = new ArrayList<>();
         try (Connection connection = DbUtils.getConnection()) {
@@ -26,26 +25,21 @@ public class CityUtils {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
         return cities;
     }
 
     public static List<City> addCity(City city) {
         List<City> updatedCity = new ArrayList<>();
-
         try (Connection connection = DbUtils.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CITY_QUERY);
             preparedStatement.setInt(1, city.getId());
             preparedStatement.setString(2, city.getNameCity());
             preparedStatement.setString(3, city.getDescription());
             preparedStatement.executeUpdate();
-
             updatedCity = getAllCity();
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
         return updatedCity;
     }
 
@@ -56,13 +50,10 @@ public class CityUtils {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_CITY_QUERY);
             preparedStatement.setInt(1, cityId);
             preparedStatement.execute();
-
             updatedCity = getAllCity();
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
         return updatedCity;
     }
 }
