@@ -14,20 +14,21 @@
     <title>Title</title>
 </head>
 <body>
-
-<% ArrayList users = (ArrayList) request.getAttribute("students"); %>
-<tr>
-    <td><%=(Student) users.get(0)%>
-    </td>
-</tr>
-
-<c:forEach items="${list}" var="s">
-    <tr align="center">
-        <td>${s}</td>
-        <td>${s.getFirstName()}</td>
-        <td>${s.getLastName()}</td>
-        <td>${s.getAge() }</td>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
     </tr>
-</c:forEach>
+    <c:forEach items="${sessionScope.students}" var="s">
+        <tr align="center">
+            <td>${s.id}</td>
+            <td>${s.firstName}</td>
+            <td>${s.lastName}</td>
+            <td>${s.age}</td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

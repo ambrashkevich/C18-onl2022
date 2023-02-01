@@ -9,12 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(value = "/getstudents")
+@WebServlet(value = "/students")
 
 public class StudentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Student> studentList = CRUDUtils.getAllStudents();
+        studentList.forEach(System.out::println);
         req.getSession().setAttribute("students", studentList);
         resp.sendRedirect("student.jsp");
     }
