@@ -11,13 +11,6 @@ import java.io.IOException;
 public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        int a = 1;
-//        int b = 2;
-//        int c = a + b;
-//        String result = a + " + " + b + " = " + c;
-//        req.setAttribute("result", result);
-//        req.getSession().setAttribute("result", result);
-//        resp.sendRedirect("index.jsp?message=" + URLEncoder.encode(result, "UTF-8"));
         resp.sendRedirect("index.jsp");
         Integer a = Integer.valueOf(req.getParameter("a"));
         Integer b = Integer.valueOf(req.getParameter("b"));

@@ -1,4 +1,4 @@
-package by.tms.servlet;
+package by.tms.controller;
 
 import by.tms.model.User;
 
