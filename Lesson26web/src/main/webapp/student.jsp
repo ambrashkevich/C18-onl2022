@@ -12,16 +12,18 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Age</th>
-    </tr>
-    <c:forEach items="${sessionScope.students}" var="s">
+<div class="parent">
+    <table class="flat-table flat-table-1" border="1">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+        <c:forEach items="${sessionScope.students}" var="s">
         <tr align="center">
             <td>${s.id}</td>
             <td>${s.firstName}</td>
@@ -29,6 +31,7 @@
             <td>${s.age}</td>
         </tr>
     </c:forEach>
-</table>
+    </table>
+</div>
 </body>
 </html>
