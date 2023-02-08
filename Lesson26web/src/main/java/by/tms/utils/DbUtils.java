@@ -14,15 +14,19 @@ public class DbUtils {
     private static final String DB_USERNAME = "postgres";
     private static final String DB_PASSWORD = "vadim";
 
+
     public static Connection getConnection() {
         Connection connection = null;
         try {
             System.out.println(DB_URL);
             System.out.println(DB_PASSWORD);
             System.out.println(DB_USERNAME);
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
         } catch (SQLException e) {
             System.out.println("Exception " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
         return connection;
     }
