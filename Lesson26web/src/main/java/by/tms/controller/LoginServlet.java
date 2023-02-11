@@ -37,15 +37,7 @@ public class LoginServlet extends HttpServlet {
         session.setAttribute("email", email);
         session.setAttribute("pass", pass);
 
-        resp.sendRedirect("/home");
-//        System.out.println(email + " "+ pass);
-//        resp.setContentType("text/plain");
-//        if (user.getEmail().equals(email) && user.getPassword().equals(pass)) {
-//            resp.getWriter().write("Success logged!!");
-//        } else {
-//            resp.getWriter().println("Параметры не корректные!");
-//        }
-
+        resp.sendRedirect("/home.jsp");
     }
 }
 
