@@ -102,10 +102,10 @@
             <input type="text" id="age" name="age"><br>
         </div>
         <button type="submit" class="buttons">Submit</button>
-        <a href="${pageContext.request.contextPath}/home">
-            <button class="buttons">Back</button>
-        </a>
     </form>
+    <a href="${pageContext.request.contextPath}/home">
+        <button class="buttons">Back</button>
+    </a>
 </div>
 </body>
 </html>

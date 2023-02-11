@@ -32,5 +32,6 @@ public class HomeFilter implements Filter {
         } else if (!email.equals(user.getEmail()) && !password.equals(user.getPassword())) {
             response.sendRedirect("/login");
         }
+        filterChain.doFilter(request, response);
     }
 }

@@ -26,6 +26,6 @@ public class MainServlet extends HttpServlet {
         Map<String, String[]> userParams = req.getParameterMap();
         Student student = new Student(userParams.get("fname")[0], userParams.get("lname")[0], Integer.parseInt(userParams.get("age")[0]));
         CRUDUtils.saveStudent(student);
-
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 }
