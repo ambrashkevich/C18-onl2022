@@ -36,7 +36,6 @@ public class CRUDUtils {
 
     public static List<Student> saveStudent(Student student) {
         List<Student> updatedStudents = new ArrayList<>();
-        System.out.println(student.toString() + "---------------------------------------");
         try (Connection connection = DbUtils.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_STUDENT_QUERY);
             preparedStatement.setString(1, student.getFirstName());
@@ -53,7 +52,6 @@ public class CRUDUtils {
 
     public static List<Student> addStudent(int studentId) {
         List<Student> updatedStudents = new ArrayList<>();
-
         try (Connection connection = DbUtils.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_STUDENT_QUERY);
             preparedStatement.setInt(1, studentId);
