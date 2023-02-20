@@ -21,6 +21,12 @@
 
 .mb-3 {
     width: 300px;
+    padding-top: 6px;
+
+}
+
+.form-check {
+    padding-top: 10px;
 }
 
 .container {
@@ -31,3 +37,32 @@
     flex-direction: column;
 }
 
+.upd {
+    padding-top: 10px;
+    font-size: x-small;
+}
+
+.box {
+    float: right;
+    font-size: small;
+    padding-right: 80px;
+}
+
+.box label {
+    font-size: medium;
+}
+
+.box li {
+    list-style-type: none;
+}
+
+.box i {
+    color: #017F03;
+    padding-right: 10px
+
+}
+
+.border {
+    padding: 15px;
+    width: 630px;
+}
