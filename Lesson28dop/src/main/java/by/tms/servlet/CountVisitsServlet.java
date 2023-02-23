@@ -1,3 +1,6 @@
+/**
+ * 5) Создать сервлет для вывода количества посещений страницы(использовать сессию)
+ */
 package by.tms.servlet;
 
 import javax.servlet.ServletException;
