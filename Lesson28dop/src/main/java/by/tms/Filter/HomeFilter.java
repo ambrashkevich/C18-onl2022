@@ -1,4 +1,4 @@
-package by.tms.filter;
+package by.tms.Filter;
 
 import by.tms.model.User;
 
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter("/home")
+@WebFilter("/successful")
 public class HomeFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -18,9 +18,9 @@ public class HomeFilter implements Filter {
         User user = new User();
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         if (email == null && password == null) {
-            response.sendRedirect("/login");
+            response.sendRedirect("/save-request");
         } else if (!email.equals(user.getEmail()) && !password.equals(user.getPassword())) {
-            response.sendRedirect("/login");
+            response.sendRedirect("/save-request");
         }
         filterChain.doFilter(request, response);
     }

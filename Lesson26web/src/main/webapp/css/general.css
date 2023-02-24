@@ -10,13 +10,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../img/wallpaperflare.com_wallpaper.jpg');
+    background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.container {
+.containers {
     color: #fff;
     margin: 40px auto;
     background-color: rgba(255, 255, 255, 0.06);
@@ -24,12 +24,13 @@ body {
     border-radius: 15px;
     padding: 32px;
     backdrop-filter: blur(10px);
-    height: 260px;
+    height: 390px;
     width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    gap: 10px;
 }
 
 .buttons {
@@ -76,8 +77,4 @@ label {
     align-items: center;
     flex-direction: column;
     gap: 15px;
-}
-
-.checkbox {
-
 }

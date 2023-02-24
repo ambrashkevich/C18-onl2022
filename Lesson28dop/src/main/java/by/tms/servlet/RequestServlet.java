@@ -1,4 +1,4 @@
-package by.tms.controller;
+package by.tms.servlet;
 
 import by.tms.model.User;
 
@@ -10,12 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(value = "/login", name = "LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet(value = "/save-request")
+
+public class RequestServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
-        request.getRequestDispatcher("loginForm.jsp").forward(request, response);
+        request.getRequestDispatcher("save-request.jsp").forward(request, response);
     }
 
     @Override
@@ -28,7 +29,6 @@ public class LoginServlet extends HttpServlet {
         session.setAttribute("email", email);
         session.setAttribute("pass", pass);
 
-        resp.sendRedirect("/homeForm.jsp");
+        resp.sendRedirect("/successful.jsp");
     }
 }
-

@@ -1,4 +1,4 @@
-package by.tms.controller;
+package by.tms.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-@WebServlet("/home")
+@WebServlet("/successful")
 public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -17,6 +17,6 @@ public class HomeServlet extends HttpServlet {
         Object email = session.getAttribute("email");
         Object pass = session.getAttribute("pass");
         System.out.println("from session " + email + " " + pass);
-        resp.sendRedirect("homeForm.jsp");
+        resp.sendRedirect("successful.jsp");
     }
 }

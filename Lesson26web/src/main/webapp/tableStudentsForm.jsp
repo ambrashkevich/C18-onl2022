@@ -1,13 +1,3 @@
-<%@ page import="by.tms.model.Student" %>
-<%@ page import="java.util.ArrayList" %><%--
-  Created by IntelliJ IDEA.
-  User: Вадим
-  Date: 27.01.2023
-  Time: 23:51
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="crud" class="by.tms.utils.CRUDUtils" scope="request"/>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
@@ -28,13 +18,20 @@
         <c:forEach items="${sessionScope.students}" var="s">
             <tr>
                 <td>${s.id}</td>
-            <td>${s.firstName}</td>
-            <td>${s.lastName}</td>
-            <td>${s.age}</td>
-        </tr>
-    </c:forEach>
+                <td>${s.firstName}</td>
+                <td>${s.lastName}</td>
+                <td>${s.age}</td>
+            </tr>
+        </c:forEach>
+
     </table>
+    <div>
+        <a href="${pageContext.request.contextPath}/home">
+            <button class="buttons">Back</button>
+        </a>
+    </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>

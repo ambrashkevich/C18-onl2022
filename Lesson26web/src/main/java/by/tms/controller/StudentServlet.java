@@ -17,8 +17,7 @@ public class StudentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Student> studentList = CRUDUtils.getAllStudents();
-        studentList.forEach(System.out::println);
         req.getSession().setAttribute("students", studentList);
-        resp.sendRedirect("student.jsp");
+        resp.sendRedirect("tableStudentsForm.jsp");
     }
 }

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="css/add.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Login form</title>
 </head>
 <div class="container">
@@ -11,6 +11,5 @@
         <input type="password" class="form-control" name="pass" placeholder="Password" required=""/>
         <button class="buttons" type="submit">Login</button>
     </form>
-
 </div>
 </html>
