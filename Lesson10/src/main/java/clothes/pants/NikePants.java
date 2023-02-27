@@ -1,6 +1,6 @@
 package clothes.pants;
 
-public class NikePants implements IPants{
+public class NikePants implements IPants {
     @Override
     public void putOn() {
         System.out.println("Put on a nike pants");

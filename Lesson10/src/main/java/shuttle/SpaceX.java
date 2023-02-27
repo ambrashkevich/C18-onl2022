@@ -1,10 +1,10 @@
 package shuttle;
 
-public class SpaceX implements IStart{
+public class SpaceX implements IStart {
     @Override
     public boolean checkSystem() {
-        int randomNumber = (int)(Math.random()*11);
-        return randomNumber >3;
+        int randomNumber = (int) (Math.random() * 11);
+        return randomNumber > 3;
     }
 
     @Override

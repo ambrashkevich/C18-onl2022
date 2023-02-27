@@ -1,7 +1,7 @@
 package shuttle;
 
 public interface IStart {
-   boolean checkSystem();
+    boolean checkSystem();
 
     void starEngine();
 

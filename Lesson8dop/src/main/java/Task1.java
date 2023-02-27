@@ -15,7 +15,7 @@ public class Task1 {
             numArray[i] = i;
         }
         boolean checkNumber = checkNumber(num, numArray);
-        System.out.println(checkNumber ? "Число входит:":"Число не входит");
+        System.out.println(checkNumber ? "Число входит:" : "Число не входит");
         System.out.println(Arrays.toString(numArray));
     }
 

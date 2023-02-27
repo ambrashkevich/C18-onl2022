@@ -6,8 +6,10 @@
 ////          6 7 8 9      2 7 3 5
 ////          3 3 4 5      3 8 4 6
 ////          1 5 6 7      4 9 5 7
+
+import java.util.Random;
 import java.util.Scanner;
-import java.util.*;
+
 public class Task14 {
     public static void main(String[] args) {
 
@@ -36,6 +38,7 @@ public class Task14 {
         System.out.println();
         transpose(matrix);
     }
+
     public static void transpose(int[][] matr) {
         int[][] transposedMatr = new int[matr.length][matr.length];
         for (int i = 0; i < matr.length; i++) {
