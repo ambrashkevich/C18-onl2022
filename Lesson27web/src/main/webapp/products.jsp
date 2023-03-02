@@ -32,25 +32,21 @@
 </div>
 </nav>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-<c:set var="categories" value="${sessionScope.get('categories')}"/>
-<h2>Popular categories</h2>
+<c:set var="products" value="${sessionScope.get('products')}"/>
+<h2>Products</h2>
 
 <div class="container-fluid">
-    <c:if test="${not empty categories}">
+    <c:if test="${not empty products}">
         <div class="row">
-            <c:forEach items="${categories}" var="category">
-                <%-- w-25 настройка определяет ширину карты (25% от ширины родительского элемента, т.е. строки)
-                Больше информации вот здесь https://getbootstrap.com/docs/4.1/utilities/sizing/
-                m-1 означает внешинй отступ (margin) со всех 4 сторон.
-                Измеряется специальной переменной $spacer, значение по умолчанию у которой
-                равно 1rem (16px в большинстве браузеров).
-                1 = $spacer * .25 = 16 * 0.25 = 4px--%>
+            <c:forEach items="${products}" var="product">
                 <div class="card w-25 m-1" type="category">
                     <div class="card-body">
-                        <a href="${pageContext.request.contextPath}/category?name=${category.getName()}">${category.getName()}</a>
+                        <a href="${pageContext.request.contextPath}/category?name=${product.getName()}">${product.getName()}</a>
                         <img class="card-img" style="width:150px;height:120px"
-                             src="${contextPath}/images/${category.getImageName()}" alt="Card image">
-
+                             src="${contextPath}/images/${product.getImageName()}" alt="Card image">
+                        <h5>Description: </h5>
+                        <p>${product.getDescription()}</p>
+                        <h5>Price: ${product.getPrice()}$</h5>
                     </div>
                 </div>
             </c:forEach>
