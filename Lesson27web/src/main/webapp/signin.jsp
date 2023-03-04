@@ -11,11 +11,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="container">
     <div class="row">
-        <%--    Put elements in the center of page
-        offset-md-4 - смещение на 4 колонки вправо--%>
         <div class="col-md-8 offset-md-4">
             <h2>Login</h2>
             <p>Please, enter your credentials</p>
