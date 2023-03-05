@@ -77,5 +77,6 @@
         <module>Lesson26web</module>
         <module>Lesson28dop</module>
         <module>Lesson27web</module>
+        <module>Lesson31pattern</module>
     </modules>
 </project>
