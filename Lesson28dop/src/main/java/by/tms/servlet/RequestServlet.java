@@ -16,7 +16,7 @@ public class RequestServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
-        request.getRequestDispatcher("save-request.jsp").forward(request, response);
+        request.getRequestDispatcher("saveRequest.jsp").forward(request, response);
     }
 
     @Override

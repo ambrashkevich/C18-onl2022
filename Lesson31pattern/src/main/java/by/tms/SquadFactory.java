@@ -1,6 +1,6 @@
 package by.tms;
 
-public interface GameFactory {
+public interface SquadFactory {
     Archer getArcher();
 
     Warrior getWarrior();

@@ -1,11 +1,11 @@
 package by.tms.elvessquad;
 
 import by.tms.Archer;
-import by.tms.GameFactory;
+import by.tms.SquadFactory;
 import by.tms.Warrior;
 import by.tms.Wizard;
 
-public class ElvesSquadFactory implements GameFactory {
+public class ElvesSquadFactory implements SquadFactory {
     @Override
     public Archer getArcher() {
         return new ElvesAchers();

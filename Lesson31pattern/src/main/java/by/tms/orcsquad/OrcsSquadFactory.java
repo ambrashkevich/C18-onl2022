@@ -1,11 +1,11 @@
 package by.tms.orcsquad;
 
 import by.tms.Archer;
-import by.tms.GameFactory;
+import by.tms.SquadFactory;
 import by.tms.Warrior;
 import by.tms.Wizard;
 
-public class OrcsSquadFactory implements GameFactory {
+public class OrcsSquadFactory implements SquadFactory {
     @Override
     public Archer getArcher() {
         return new OrcsArchers();
