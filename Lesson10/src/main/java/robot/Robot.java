@@ -1,13 +1,12 @@
 package robot;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import robot.hands.IHand;
 import robot.heads.IHead;
 import robot.legs.ILegs;
 
-import lombok.Getter;
-
-import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter

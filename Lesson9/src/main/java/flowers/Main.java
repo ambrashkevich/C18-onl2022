@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         FlowerMarket flowerMarket = new FlowerMarket();
         Bouquet[] bouquets = new Bouquet[5];
-        bouquets[0] = flowerMarket.getBouquet(ROSE, GERBER,ASTER);
+        bouquets[0] = flowerMarket.getBouquet(ROSE, GERBER, ASTER);
         for (Bouquet bouquet : bouquets) {
             System.out.println(bouquet);
             System.out.println("стоимость букета " + bouquet.getPrice());

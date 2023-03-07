@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class Cargo extends Ground {
     private int liftingCapacity;
+
     @Override
     public String toString() {
         return "Cargo{" +
@@ -20,6 +21,7 @@ public class Cargo extends Ground {
                 ", kiloWats=" + getKiloWats() +
                 '}';
     }
+
     public void capacity(int cargoValue) {
         if (liftingCapacity == cargoValue) {
             System.out.println("Грузовик загружен");

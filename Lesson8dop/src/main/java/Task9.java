@@ -11,6 +11,7 @@
 //B W B W B W B W
 //W B W B W B W B
 //B W B W B W B W
+
 import java.util.Scanner;
 
 public class Task9 {

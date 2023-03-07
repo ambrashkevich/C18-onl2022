@@ -5,10 +5,10 @@
 //В результате должен быть новый массив без указанного числа.
 
 
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class Task2 {
         }
 
         if (!isPresent) {
-            System.out.println("Число не входит в массив" + entry );
+            System.out.println("Число не входит в массив" + entry);
         }
 
 

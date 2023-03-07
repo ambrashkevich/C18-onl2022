@@ -30,13 +30,13 @@ public class SeasonDemo {
     }
 
     public static void printAllValues() {
-        for (Seasons s: Seasons.values()) {
-            System.out.println(s + " " + "Температура"+ " " + s.getAvgTemp()+" " +s.getDescription());
+        for (Seasons s : Seasons.values()) {
+            System.out.println(s + " " + "Температура" + " " + s.getAvgTemp() + " " + s.getDescription());
         }
 
     }
 
 
-    }
+}
 
 

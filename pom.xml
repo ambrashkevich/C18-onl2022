@@ -72,11 +72,11 @@
         <module>Lesson20</module>
         <module>Lesson21</module>
         <module>Lesson22</module>
-        <module>Lesson24</module>
         <module>Lesson24web</module>
         <module>lesson25web</module>
         <module>Lesson26web</module>
         <module>Lesson28dop</module>
         <module>Lesson27web</module>
+        <module>Lesson31pattern</module>
     </modules>
 </project>

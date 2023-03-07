@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MilitaryTask {
 
-    static void printPersonList(List<Person> personList){
+    static void printPersonList(List<Person> personList) {
         personList.forEach(System.out::println);
     }
 
@@ -27,11 +27,11 @@ public class MilitaryTask {
 
         PersonRegistry personRegistry = new PersonRegistry(
                 List.of(
-                        new Person("Vadim", 18, Sex.MALE,new Address( "Belarus", "Minsk")),
-                        new Person("Alexander", 20, Sex.MALE,new Address( "Belarus", "Baranovichi")),
-                        new Person("Natasha", 23, Sex.FEMALE,new Address ("Belarus", "Grodno")),
-                        new Person("Vlad", 24, Sex.MALE,new Address ("Belarus", "Vitebsk")),
-                        new Person("Vanya", 25, Sex.MALE,new Address ("Belarus", "Gomel"))
+                        new Person("Vadim", 18, Sex.MALE, new Address("Belarus", "Minsk")),
+                        new Person("Alexander", 20, Sex.MALE, new Address("Belarus", "Baranovichi")),
+                        new Person("Natasha", 23, Sex.FEMALE, new Address("Belarus", "Grodno")),
+                        new Person("Vlad", 24, Sex.MALE, new Address("Belarus", "Vitebsk")),
+                        new Person("Vanya", 25, Sex.MALE, new Address("Belarus", "Gomel"))
                 ));
 
         MilitaryOffice militaryOffice = new MilitaryOffice(personRegistry);

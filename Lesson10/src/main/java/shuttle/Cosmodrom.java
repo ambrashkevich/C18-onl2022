@@ -3,8 +3,8 @@ package shuttle;
 public class Cosmodrom {
     private IStart rocket;
 
-    public void start(IStart rocket){
-        if(rocket.checkSystem()){
+    public void start(IStart rocket) {
+        if (rocket.checkSystem()) {
             rocket.starEngine();
             countdown();
             rocket.start();
