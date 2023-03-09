@@ -19,7 +19,7 @@ public class HomeFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         if (email == null && password == null) {
             response.sendRedirect("/save-request");
-        } else if (!email.equals(user.getEmail()) && !password.equals(user.getPassword())) {
+        } else if (!email.equals(user.getUsername()) && !password.equals(user.getPassword())) {
             response.sendRedirect("/save-request");
         }
         filterChain.doFilter(request, response);

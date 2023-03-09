@@ -1,38 +1,43 @@
 package by.tms.servlet;
 
-import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-public class PoemServlet {
-    public static void main(String[] args) {
-        Socket s = null;
-        File file = new File("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson28dop\\src\\main\\java\\poem.txt");
-        if (!file.exists()) {
-            System.out.println("Файла не существует");
-        } else {
-            System.out.println("Файл найден");
-        }
+import java.io.File;
+import java.io.IOException;
+
+//*1) Клиент при обращении к серверу получает случайно выбранное стихотворение
+// Максима Богдановича из файла.
+
+@WebServlet(value = "/poem")
+public class PoemServlet extends HttpServlet {
+
+    public void init() throws ServletException {
+        super.init();
+    }
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
         try {
-            Random random = new Random();
-            ServerSocket server = new ServerSocket(8080);
-            s = server.accept();
-            PrintStream ks = new PrintStream(s.getOutputStream());
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            List<String> list = new ArrayList<>();
-            while (bufferedReader.ready()) {
-                list.add(bufferedReader.readLine());
+            File file = new File("src/main/resources/poem");
+            if (file.canRead()) {
+                new String(getServletContext().getResourceAsStream("src/main/resources/poem" + ".txt").readAllBytes());
+            } else {
+
             }
-            String m = list.get(random.nextInt(50));
-            ks.print(m);
-            ks.flush();
-            s.close();
-        } catch (IOException e) {
-            System.out.println("Error:" + e);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poem.jsp");
+            requestDispatcher.forward(request, response);
+        } catch (Exception e) {
+            System.out.println(e.getMessage() + "error");
         }
+    }
+
+    public void destroy() {
+        super.destroy();
     }
 }

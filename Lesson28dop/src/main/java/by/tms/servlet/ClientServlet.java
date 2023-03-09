@@ -23,7 +23,7 @@ public class ClientServlet extends HttpServlet {
         List<String> lines = Collections.emptyList();
         try {
             lines =
-                    Files.readAllLines(Paths.get("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson28dop\\src\\main\\java\\poem.txt"), StandardCharsets.UTF_8);
+                    Files.readAllLines(Paths.get("C:\\Users\\Вадим\\IdeaProjects\\C18-onl2022\\Lesson28dop\\src\\main\\java\\1.txt"), StandardCharsets.UTF_8);
 //                lines = lines.stream().map(s -> )
         } catch (IOException e) {
             e.printStackTrace();
