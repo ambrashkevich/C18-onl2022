@@ -44,11 +44,6 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.31</version>
         </dependency>
-        <dependency>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs</artifactId>
-            <version>4.2.0</version>
-        </dependency>
     </dependencies>
 
     <modules>
@@ -82,5 +77,6 @@
         <module>Lesson28dop</module>
         <module>Lesson27web</module>
         <module>Lesson31pattern</module>
+        <module>Lesson30</module>
     </modules>
 </project>

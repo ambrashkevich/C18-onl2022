@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
-
+/*2) Создать сервлет для вывода текущей даты и времени. Постоянное обновление страницы или коммонента, что бы время в браузере обновлялось.*/
 @WebServlet("/date")
 public class DateServlet extends HttpServlet {
 

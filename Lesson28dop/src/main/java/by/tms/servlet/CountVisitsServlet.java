@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/*5) Создать сервлет для вывода количества посещений страницы(использовать сессию)*/
 @WebServlet("/visit")
 public class CountVisitsServlet extends HttpServlet {
 
