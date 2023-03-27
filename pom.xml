@@ -13,7 +13,6 @@
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <spotbugs.maven.plugin.version>4.7.3.2</spotbugs.maven.plugin.version>
         <checkstyle.maven.plugin.version>3.1.1</checkstyle.maven.plugin.version>
         <checkstyle.version>8.30</checkstyle.version>
@@ -31,7 +30,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>1.18.26</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -44,12 +43,12 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.5.1</version>
+            <version>42.5.4</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.31</version>
+            <version>8.0.32</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -62,8 +61,13 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -150,7 +154,7 @@
                             <goal>check</goal>
                         </goals>
                         <configuration>
-                            <configLocation>codestyle/checkstyle.xml</configLocation>
+                            <configLocation>codequality/checkstyle.xml</configLocation>
                             <encoding>UTF-8</encoding>
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
@@ -190,7 +194,9 @@
         <module>Lesson26web</module>
         <module>Lesson28dop</module>
         <module>Lesson27web</module>
+        <module>Lesson30web</module>
         <module>Lesson31pattern</module>
-        <module>Lesson30</module>
+
+
     </modules>
 </project>
