@@ -1,11 +1,11 @@
-package by.tms.DAO;
+package by.tms.dao;
 
 import by.tms.model.User;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
+
     private final List<User> store = new ArrayList<>();
 
     public User getById(int id) {

@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Passenger extends Ground {
+
     private String bodyType;
     private int numberOfPassengers;
 
@@ -28,8 +29,8 @@ public class Passenger extends Ground {
         double distance = maxSpeed * time;    // Расстояние
         double fuelLevel = distance * consumption / 100;  // Сколько топлива потратили
         System.out.println("За время" + " " + time + " " + "час " + "автомобиль" + " " + name + " " +
-                "c максимальной скорость" + " " + maxSpeed + "км/ч " + " " + "проехал" + " " +
-                distance + "км." + " " + "Израсходавно топлива" + " " + fuelLevel);
+                                   "c максимальной скорость" + " " + maxSpeed + "км/ч " + " " + "проехал" + " " +
+                                   distance + "км." + " " + "Израсходавно топлива" + " " + fuelLevel);
     }
 }
 

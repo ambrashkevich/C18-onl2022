@@ -1,4 +1,5 @@
 public class TheorySwitch {
+
     public static void main(String[] args) {
         int num = 8;
 //        int num = 2;

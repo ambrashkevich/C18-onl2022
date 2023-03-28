@@ -8,6 +8,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public class GasTank {
+
     private int totalTankVolume;
     private double fuelQuantity;
 

@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class Task4 {
+
     public static void main(String[] args) {
         Random time = new Random();
         int a = time.nextInt(28801), b = a / 60 / 60;

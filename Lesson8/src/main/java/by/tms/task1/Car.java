@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Car {
+
     private final Engine engine;
     private final GasTank gasTank;
     private double countAllDistance;
@@ -55,7 +56,7 @@ public class Car {
                 System.out.println("Топлива не хватит");
             }
             System.out.println("Машина проехала " + distance + " км и затратила топлива " +
-                    countFuelForDistance + " в баке осталось " + gasTank.getFuelQuantity());
+                                       countFuelForDistance + " в баке осталось " + gasTank.getFuelQuantity());
         }
     }
 

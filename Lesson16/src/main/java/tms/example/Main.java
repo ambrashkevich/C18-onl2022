@@ -4,10 +4,10 @@ import by.tms.task2.model.Animal;
 import by.tms.task2.model.Generics;
 import by.tms.task3.MinMax;
 import by.tms.task4.Calculator;
-
 import java.io.File;
 
 public class Main {
+
     public static void main(String[] args) {
         /**
          * 1) Список каталога
@@ -25,15 +25,16 @@ public class Main {
          * V должен реализовать интерфейс Serializable и расширять класс Animal, K должен расширять класс Number.
          */
         Generics<String, Animal, Double> generics = new Generics<>("name", new Animal("Ив"), 1.3);
-        System.out.println(generics.getT());
-        System.out.println(generics.getV());
-        System.out.println(generics.getK());
+        System.out.println(generics.getTaType());
+        System.out.println(generics.getVaType());
+        System.out.println(generics.getKaType());
         System.out.println(generics.className());
         /**
          * 3) Написать обобщенный класс MinMax, который содержит методы для нахождения минимального и максимального элемента массива.
          * Массив является переменной класса. Массив должен передаваться в класс через конструктор.
          * Написать метод принимающий MinMax объект и печатающий информацию об элементах.
-         */{
+         */
+        {
             Integer[] arrayOfInteger = {56, 45, 89, 91, 9};
             Double[] arrayOfDouble = {5.6, 7.8, 3.5, 9.1};
 
@@ -45,7 +46,6 @@ public class Main {
             getInfo(minMaxDouble);
             printMinAndMaxValue(minMaxDouble);
         }
-
         /**
          * 4) Написать класс Калькулятор (необобщенный), который содержит обобщенные статические методы - sum, multiply, divide,
          * subtraction. Параметры этих методов - два числа разного типа, над которыми должна быть произведена операция.
@@ -61,7 +61,6 @@ public class Main {
             System.out.println(minMax.getArrayOfNumbers()[i]);
         }
     }
-
 
     private static void printMinAndMaxValue(MinMax<?> minMax) {
         System.out.println("Min element: " + minMax.getMin() + "\n" + "Max element: " + minMax.getMax());

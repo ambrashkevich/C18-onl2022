@@ -22,16 +22,16 @@ public class Task9 {
         int n = sc.nextInt();
         int m = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++)
-                if ((i + j) % 2 == 0)
+            for (int j = 0; j < m; j++) {
+                if ((i + j) % 2 == 0) {
                     System.out.print("W ");
-                else
+                } else {
                     System.out.print("B ");
-            System.out.println();
+                    System.out.println();
+                }
+            }
         }
-
     }
-
 }
 
 

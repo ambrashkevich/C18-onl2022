@@ -4,6 +4,7 @@ import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 public class Skirt extends Clothing implements IWomensClothing {
+
     public Skirt(Size size, String color, int price) {
         super(size, color, price);
     }

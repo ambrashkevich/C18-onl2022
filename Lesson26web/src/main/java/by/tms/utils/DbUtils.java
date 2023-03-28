@@ -14,7 +14,6 @@ public class DbUtils {
     private static final String DB_USERNAME = "postgres";
     private static final String DB_PASSWORD = "vadim";
 
-
     public static Connection getConnection() {
         Connection connection = null;
         try {

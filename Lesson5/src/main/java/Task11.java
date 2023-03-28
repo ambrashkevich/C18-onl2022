@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Task11 {
+
     public static void main(String[] args) {
         int[] array1 = {0, 3, 46, 3, 2, 1, 2};
         int[] array2 = {0, 34, 46, 31, 20, 1, 28};

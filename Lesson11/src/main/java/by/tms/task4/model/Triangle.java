@@ -4,6 +4,7 @@ import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 public class Triangle extends Figure implements ISquare {
+
     private double base;
     private double height;
 

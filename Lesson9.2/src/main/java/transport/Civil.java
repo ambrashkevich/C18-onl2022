@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Civil extends Air {
+
     private int numberOfPassengers;
     private boolean business;
 

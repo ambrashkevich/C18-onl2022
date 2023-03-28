@@ -1,11 +1,12 @@
 package by.tms.task3.model;
 
-import lombok.Getter;
-
 import static by.tms.task3.model.FruitType.APRICOT;
+
+import lombok.Getter;
 
 @Getter
 public class Apricot extends Fruit {
+
     public Apricot(double weight, double price) {
         super(weight, price);
     }

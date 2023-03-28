@@ -1,6 +1,6 @@
 <!DOCTYPE web-app PUBLIC
-        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+    "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -8,7 +8,7 @@
          version="5.0">
     <filter>
         <filter-name>AuthFilter</filter-name>
-        <filter-class>by.tms.Filter.AuthFilter</filter-class>
+        <filter-class>by.tms.filter.AuthFilter</filter-class>
     </filter>
 
     <filter-mapping>

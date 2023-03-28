@@ -1,68 +1,68 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    font-family: 'Barlow', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Barlow', sans-serif;
 }
 
 .input-box {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .progress {
-    width: 300px;
-    margin-top: 10px;
+  width: 300px;
+  margin-top: 10px;
 }
 
 .btn {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .mb-3 {
-    width: 300px;
-    padding-top: 6px;
+  width: 300px;
+  padding-top: 6px;
 
 }
 
 .form-check {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .container {
-    padding-top: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .upd {
-    padding-top: 10px;
-    font-size: x-small;
+  padding-top: 10px;
+  font-size: x-small;
 }
 
 .box {
-    float: right;
-    font-size: small;
-    padding-right: 80px;
+  float: right;
+  font-size: small;
+  padding-right: 80px;
 }
 
 .box label {
-    font-size: medium;
+  font-size: medium;
 }
 
 .box li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .box i {
-    color: #017F03;
-    padding-right: 10px
+  color: #017F03;
+  padding-right: 10px
 
 }
 
 .border {
-    padding: 15px;
-    width: 630px;
+  padding: 15px;
+  width: 630px;
 }

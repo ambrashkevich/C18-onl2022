@@ -7,8 +7,8 @@ import lombok.Setter;
 @Getter
 @Setter
 
-
 public class Military extends Air {
+
     private boolean catapult = true;
     private int numberOfMissiles = 3;
 

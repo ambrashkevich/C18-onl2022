@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Computer {
+
     private final String cpu;
     private final String ram;
     private final String hdd;
@@ -29,7 +30,6 @@ public class Computer {
             Scanner sc = new Scanner(System.in);
             // Присваиваем ввод в переменную
             int userNum = sc.nextInt();
-
 
             // Создаем рандомное значение
             Random random = new Random();

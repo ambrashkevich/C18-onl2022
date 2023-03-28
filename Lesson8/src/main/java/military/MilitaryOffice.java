@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MilitaryOffice {
+
     private final PersonRegistry registry;
 
     MilitaryOffice(PersonRegistry registry) {

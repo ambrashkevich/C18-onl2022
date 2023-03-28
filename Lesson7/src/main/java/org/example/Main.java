@@ -1,11 +1,10 @@
 package org.example;
 
 public class Main {
+
     public static void main(String[] args) {
 
-
         User user = new User();
-
 
         System.out.println("Имя и фамиля:" + user.getFirstAndLastName());
 
@@ -21,6 +20,7 @@ public class Main {
 
 
 class User {
+
     private String name;
     private String lastName;
     private int age;

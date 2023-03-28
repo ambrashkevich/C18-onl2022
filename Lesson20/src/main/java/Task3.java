@@ -1,8 +1,8 @@
 import by.tms.model.Toy;
-
 import java.util.Map;
 
 public class Task3 {
+
     public static void main(String[] args) {
 //      3) Создайте HashMap, содержащий пары значений - имя игрушки и объект игрушки (класс Toy).
 //        Перебрать и распечатать набор из имен игрушек (keySet).
@@ -14,10 +14,10 @@ public class Task3 {
         Toy toy3 = new Toy("Машинка", 400);
         Toy toy4 = new Toy("Железная дорога", 500);
         Map<String, Toy> toyMap = Map.of(toy.getName(), toy,
-                toy1.getName(), toy1,
-                toy2.getName(), toy2,
-                toy3.getName(), toy3,
-                toy4.getName(), toy4);
+                                         toy1.getName(), toy1,
+                                         toy2.getName(), toy2,
+                                         toy3.getName(), toy3,
+                                         toy4.getName(), toy4);
         iterateValues(toyMap);
         iterateKeys(toyMap);
         iterateEntries(toyMap);

@@ -14,19 +14,15 @@ public enum Seasons {
         }
     },
     SPRING(10);
-
-
     private final int avgTemp;
 
     public int getAvgTemp() {
         return avgTemp;
     }
 
-
     public String getDescription() {
         return "Холодное время года";
     }
-
 }
 
 

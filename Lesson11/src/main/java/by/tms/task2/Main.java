@@ -1,8 +1,16 @@
 package by.tms.task2;
 
-import by.tms.task2.model.*;
+import by.tms.task2.model.Atelier;
+import by.tms.task2.model.Clothing;
+import by.tms.task2.model.ClothingType;
+import by.tms.task2.model.Pants;
+import by.tms.task2.model.Size;
+import by.tms.task2.model.Skirt;
+import by.tms.task2.model.Tie;
+import by.tms.task2.model.Tshirt;
 
 public class Main {
+
     public static void main(String[] args) {
 /**
  Задача2: Одежда
@@ -31,29 +39,39 @@ public class Main {
     }
 
     private static Clothing createClothes(ClothingType type, Size size, String color, int price) {
-        return switch (type) {
-            case TSHIRT -> Tshirt.builder()
-                    .size(size)
-                    .color(color)
-                    .price(price)
-                    .build();
-            case PANTS -> Pants.builder()
-                    .size(size)
-                    .color(color)
-                    .price(price)
-                    .build();
-            case SKIRT -> Skirt.builder()
-                    .size(size)
-                    .color(color)
-                    .price(price)
-                    .build();
-            case TIE -> Tie.builder()
-                    .size(size)
-                    .color(color)
-                    .price(price)
-                    .build();
-            default -> throw new IllegalArgumentException("Unknown type");
-        };
+        ClothingType clothingType;
+        switch (type) {
+            case TSHIRT: {
+                return Tshirt.builder()
+                             .size(size)
+                             .color(color)
+                             .price(price)
+                             .build();
+            }
+            case PANTS: {
+                return Pants.builder()
+                            .size(size)
+                            .color(color)
+                            .price(price)
+                            .build();
+            }
+            case SKIRT: {
+                return Skirt.builder()
+                            .size(size)
+                            .color(color)
+                            .price(price)
+                            .build();
+            }
+            case TIE: {
+                return Tie.builder()
+                          .size(size)
+                          .color(color)
+                          .price(price)
+                          .build();
+            }
+            default:
+                throw new IllegalArgumentException("Unknown type");
+        }
     }
 }
 

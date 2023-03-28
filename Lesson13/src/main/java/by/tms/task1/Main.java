@@ -4,6 +4,7 @@ import by.tms.task1.model.Employee;
 import by.tms.task1.service.TextFormatter;
 
 public class Main {
+
     public static void main(String[] args) {
         /*
           1) Вырезать подстроку из строки начиная с первого вхождения символа(А) до, последнего вхождения сивола(B).
@@ -26,13 +27,13 @@ public class Main {
           который будет содержать метод generateReport, в котором выводится информация о зарплате всех сотрудников.
           Используйте форматировании строк(https://javarush.ru/quests/lectures/questmultithreading.level02.lecture06)
           Пусть salary будет выровнено по правому краю, десятичное значение имеет 2 знака после запятой и по одной первой букве имени и отчества через точки.
-          Пример: | Л.Н. Толстой		|		200.34|
+          Пример: | Л.Н. Толстой|200.34|
           7*(Можно не делать!))Найти количество слов, содержащих только символы латинского алфавита. Пример:
           "Методы доступа называют ещё аксессорами (от англ. access — доступ), или по отдельности — геттерами (англ. get — чтение) and сеттерами (англ. set — запись)"
          */
         {
-            String Str = new String("Алла Виктория");
-            System.out.println(Str.substring(0, 6));
+            String str = new String("Алла Виктория");
+            System.out.println(str.substring(0, 6));
             System.out.println("--------------------------------------");
         }
         {
@@ -43,10 +44,10 @@ public class Main {
         {
             String[] str = {"Казак", "дед", "привет", "нашёл", "кабак"};
             for (String s : str) {
-                String sLowerCase = s.toLowerCase();
-                StringBuilder stringBuilder = new StringBuilder(sLowerCase);
+                String stringLowerCase = s.toLowerCase();
+                StringBuilder stringBuilder = new StringBuilder(stringLowerCase);
                 StringBuilder reverse = stringBuilder.reverse();
-                if ((reverse.toString()).equals(sLowerCase)) {
+                if ((reverse.toString()).equals(stringLowerCase)) {
                     System.out.println(s);
                     System.out.println("--------------------------------------");
                 }
@@ -57,7 +58,7 @@ public class Main {
         String text = "Я уехал к другу в другой город. Мы ездили на машине. Он распахнул окно и увидел птицу.Всем привет";
         String[] sentences = text.split("\\.");
         for (String sentence : sentences) {
-            int quantity = (formatter.getNumberOfWords(sentence));
+            int quantity = formatter.getNumberOfWords(sentence);
             if (quantity >= 3 && quantity <= 5 || formatter.isPalindromeInString(sentence.split(" "))) {
                 System.out.println(sentence.trim());
                 System.out.println("--------------------------------------");

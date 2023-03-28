@@ -1,15 +1,14 @@
-package loginForm.servlets;
+package loginform.servlets;
 
-import loginForm.DAO.UserDAO;
-import loginForm.model.User;
-
+import java.io.IOException;
+import java.time.LocalDate;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.time.LocalDate;
+import loginform.dao.UserDAO;
+import loginform.model.User;
 
 /*@WebServlet(“/register”)
 public class RegistrationServlet (){}
@@ -18,6 +17,7 @@ public class RegistrationServlet (){}
 Обязательно сделать валидацию данных, которые приходят с формы регистрации в сервлете.*/
 @WebServlet("/sign-up")
 public class RegistrationServlet extends HttpServlet {
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getAttribute("isValid").equals(false)) {

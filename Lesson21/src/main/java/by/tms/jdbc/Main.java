@@ -1,7 +1,7 @@
 package by.tms.jdbc;
 
-
 public class Main {
+
     public static void main(String[] args) {
 /**
  * Основное задание

@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 public class User {
+
     private String email;
     private String password;
 

@@ -3,6 +3,7 @@
 import java.util.Arrays;
 
 public class Task7 {
+
     public static void main(String[] args) {
         int[] mas = {11, 3, 14, 16, 7};
 

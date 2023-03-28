@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.concurrent.locks.ReentrantLock;
 
 class Cashier {
+
     private String cashDeskName;
     private ReentrantLock lock;
 

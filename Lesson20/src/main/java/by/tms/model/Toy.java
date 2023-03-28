@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Toy {
+
     private String name;
     private int cost;
 

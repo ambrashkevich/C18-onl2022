@@ -1,13 +1,18 @@
-package loginForm.DAO;
+package loginform.dao;
 
-import loginForm.model.User;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import loginform.model.User;
 
 public class UserDAO {
+
     private static final String GET_ALL_USERS_QUERY = "SELECT * FROM public.\"table\"";
     private static final String INSERT_USER_QUERY = "INSERT INTO public.\"table\"(name, surname,birthday,password,email) VALUES(?, ?, ?,?,?);";
 

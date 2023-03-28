@@ -1,11 +1,11 @@
 import by.tms.model.Product;
 import by.tms.model.Shop;
 import by.tms.service.ProductPrice;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+
     /**
      * Необходимо реализовать магазин продуктов.
      * Создать класс Товар, поля:
@@ -80,7 +80,6 @@ public class Main {
         shop.add(melon);
         shop.add(pumpkin);
 
-
         List<Product> list = shop.getProducts();
         ProductPrice productPrice = new ProductPrice();
         list.sort(productPrice);
@@ -89,7 +88,7 @@ public class Main {
 
         }
         System.out.println("Получаем список товаров из магазина, сортируем по цене(по\n" +
-                "возрастанию) и выводим в консоль.");
+                                   "возрастанию) и выводим в консоль.");
         System.out.println("---------------------------------------------------------");
         shop.delete(1);
         for (int i = list.size() - 1; i >= 0; i--) {

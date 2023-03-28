@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @SuperBuilder
 public abstract class Clothing {
+
     private Size size;
     private String color;
     private int price;

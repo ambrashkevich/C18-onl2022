@@ -11,6 +11,7 @@ import clothes.shoes.NikeShoes;
 import clothes.shoes.PumaShoes;
 
 public class Main {
+
     public static void main(String[] args) {
         /*
           По аналогии с первым задание делаем след. задание.

@@ -1,13 +1,9 @@
 //5. Создайте двумерный массив. Выведите на консоль диагонали массива.
-
-
 public class Task11 {
+
     public static void main(String[] args) {
         int n = 4;
-        int[][] a = {{1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {1, 2, 3, 4},
-                {5, 6, 7, 8}};
+        int[][] a = {{1, 2, 3, 4}, {5, 6, 7, 8}, {1, 2, 3, 4}, {5, 6, 7, 8}};
         printPrincipalDiagonal(a, n);
         printSecondaryDiagonal(a, n);
     }
@@ -28,8 +24,6 @@ public class Task11 {
         }
         System.out.println();
     }
-
-
 }
 
 

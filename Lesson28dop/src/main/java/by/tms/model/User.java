@@ -10,6 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class User {
+
     private Integer id;
     private String login;
     private String password;

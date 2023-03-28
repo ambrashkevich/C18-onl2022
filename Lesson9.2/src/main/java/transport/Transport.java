@@ -6,8 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 
-
 public class Transport {
+
     private int power;
     private int maxSpeed;
     private double mass;

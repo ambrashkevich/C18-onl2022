@@ -1,6 +1,7 @@
 package clothes.shoes;
 
 public class GucciShoes implements IShoes {
+
     @Override
     public void putOn() {
         System.out.println("Put on a gucci shoes");

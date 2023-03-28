@@ -1,4 +1,5 @@
 public class Theory {
+
     public static void main(String[] args) {
         System.out.println("Hello git!");
         int a = 4;
@@ -24,11 +25,9 @@ public class Theory {
         int b2 = 5;
         System.out.println(b1 & b2);//Логическое умножение (И)
 
-
         int a1 = 2;
         int a2 = 3;
         System.out.println(a1 & a2); //Логическое умножение(И)
-
 
         int aa1 = 2;
         int aa2 = 5;

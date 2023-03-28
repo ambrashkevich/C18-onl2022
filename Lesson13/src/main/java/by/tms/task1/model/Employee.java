@@ -1,6 +1,7 @@
 package by.tms.task1.model;
 
 public class Employee implements Report {
+
     private String fullName;
     private double salary;
 

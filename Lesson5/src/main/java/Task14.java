@@ -11,6 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Task14 {
+
     public static void main(String[] args) {
 
         System.out.println("Введите размер матрицы (целое положительное число)");

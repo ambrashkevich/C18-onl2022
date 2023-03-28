@@ -1,13 +1,13 @@
 package by.tms.servlet;
 
+import java.io.File;
+import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
 
 //*1) Клиент при обращении к серверу получает случайно выбранное стихотворение
 // Максима Богдановича из файла.
@@ -26,8 +26,6 @@ public class PoemServlet extends HttpServlet {
             File file = new File("src/main/resources/poem");
             if (file.canRead()) {
                 new String(getServletContext().getResourceAsStream("src/main/resources/poem" + ".txt").readAllBytes());
-            } else {
-
             }
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
             requestDispatcher.forward(request, response);

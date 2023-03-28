@@ -4,6 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class Drum implements IInstrument {
+
     private int size;
 
     public Drum(int size) {

@@ -1,10 +1,10 @@
 import by.tms.model.FunctionalInterface;
-
 import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class Task3 {
+
     public static void main(String[] args) {
         // 3. Создать обобщенный функциональный интерфейс.
         //     * Написать класс с одним методом.
@@ -26,10 +26,10 @@ public class Task3 {
         } else if (input == 2) {
             System.out.println("Введите число");
             BigInteger input2 = scanner.nextBigInteger();
-            FunctionalInterface<BigInteger> functionalInterface = n -> IntStream.
-                    rangeClosed(2, n.intValue()).
-                    parallel().mapToObj(BigInteger::valueOf).
-                    reduce(BigInteger::multiply).get();
+            FunctionalInterface<BigInteger> functionalInterface = n -> IntStream
+                    .rangeClosed(2, n.intValue())
+                    .parallel().mapToObj(BigInteger::valueOf)
+                    .reduce(BigInteger::multiply).get();
             System.out.println("factorial of " + input2 + " is: " + functionalInterface.apply(input2));
         } else {
             System.out.println("Неправильные данные");

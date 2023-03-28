@@ -1,13 +1,13 @@
 package by.tms.task4.model;
 
+import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.io.Serializable;
 
 @Getter
 @Setter
 public class Car implements Serializable {
+
     private String brand;
     private final Engine engine;
     private final GasTank gasTank;

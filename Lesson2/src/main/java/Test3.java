@@ -1,4 +1,5 @@
 public class Test3 {
+
     public static void main(String[] args) {
         int[] mass = new int[5];
         mass[2] = 10;

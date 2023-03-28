@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Car {
+
     private String number;
     private int year;
 

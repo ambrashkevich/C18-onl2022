@@ -4,6 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class Guitar implements IInstrument {
+
     private int string;
 
     public Guitar(int string) {

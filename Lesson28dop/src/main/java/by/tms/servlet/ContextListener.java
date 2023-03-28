@@ -1,19 +1,19 @@
 package by.tms.servlet;
 
-import by.tms.DAO.UserDAO;
-import by.tms.model.User;
+import static by.tms.model.User.ROLE.ADMIN;
+import static by.tms.model.User.ROLE.USER;
 
+import by.tms.dao.UserDAO;
+import by.tms.model.User;
+import java.util.concurrent.atomic.AtomicReference;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import java.util.concurrent.atomic.AtomicReference;
-
-import static by.tms.model.User.ROLE.ADMIN;
-import static by.tms.model.User.ROLE.USER;
 
 @WebListener
 public class ContextListener implements ServletContextListener {
+
     private AtomicReference<UserDAO> dao;
 
     @Override

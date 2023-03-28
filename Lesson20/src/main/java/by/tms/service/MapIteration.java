@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class MapIteration {
+
     public static <K, V> void printByKeySet(Map<K, V> map) {
         for (K key : map.keySet()) {
             System.out.println(key + " : " + map.get(key));

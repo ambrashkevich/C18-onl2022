@@ -3,6 +3,7 @@ package tms.example;
 import java.util.List;
 
 class Buyer extends Thread {
+
     private final List<Cashier> cashiers;
     private final List<ProductType> productTypes;
 

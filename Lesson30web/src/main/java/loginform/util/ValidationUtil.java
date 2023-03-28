@@ -1,9 +1,10 @@
-package loginForm.util;
+package loginform.util;
 
 import java.time.LocalDate;
 import java.time.Period;
 
 public class ValidationUtil {
+
     public static boolean isValidName(String name, String surname) {
         System.out.println("name: " + name.matches("[a-zA-z]{3,20}") + surname.matches("[a-zA-z]{3,20}"));
         return name.matches("[a-zA-z]{3,20}") && surname.matches("[a-zA-z]{3,20}");

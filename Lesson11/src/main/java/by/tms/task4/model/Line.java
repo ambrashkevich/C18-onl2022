@@ -4,6 +4,7 @@ import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 public class Line extends Figure {
+
     private double lenght;
 
     @Override

@@ -8,6 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Flower {
+
     private String name;
     private int price;
     private FlowerType flowerType;

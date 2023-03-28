@@ -1,15 +1,15 @@
 package by.tms.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
 public class Shop {
+
     private List<Product> products;
 
     public Shop(List<Product> products) {
@@ -31,7 +31,6 @@ public class Shop {
             }
         }
     }
-
 
     public void editProduct(Product pr) {
         products.remove(products.size() - 1);

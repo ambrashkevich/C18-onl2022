@@ -1,6 +1,7 @@
 // 5) Напишите реализацию метода summ(int a, int b), вычисляющий a*b, не пользуясь операцией
 ////        умножения, где a и b целые числа, вызовите метод summ  в методе main и распечатайте на консоль.
 public class Task5 {
+
     public static void main(String[] args) {
         int summ = summ(3, 4);
         System.out.println(summ);

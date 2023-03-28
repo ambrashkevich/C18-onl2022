@@ -2,13 +2,13 @@ import by.tms.model.Book;
 import by.tms.model.EmailAddress;
 import by.tms.model.Library;
 import by.tms.model.Reader;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Task6 {
+
     public static void main(String[] args) {
         //6) Пишем библиотеку.
         //     * Для каждой книги библиотечного фонда известны автор, название и год издания.
@@ -59,35 +59,35 @@ public class Task6 {
         Library library = new Library(List.of(book1, book2, book3, book4, book5, book6, book7, book8), List.of(reader1, reader2, reader3, reader4, reader5));
         //a) Получить список всех книг библиотеки, отсортированных по году издания.
         List<Book> bookList = library.getBookList()
-                .stream().sorted(new Book.BookComparator())
-                .toList();
+                                     .stream().sorted(new Book.BookComparator())
+                                     .toList();
         bookList.forEach(System.out::println);
 //     *  b) Требуется создать список рассылки (объекты типа EmailAddress) из адресов всех читателей библиотеки.
         List<EmailAddress> emailAddressList = library.getReaderList()
-                .stream()
-                .map(Reader::getEmail)
-                .toList();
+                                                     .stream()
+                                                     .map(Reader::getEmail)
+                                                     .toList();
         emailAddressList.forEach(System.out::println);
         System.out.println("--------------------------------");
         //Снова нужно получить список рассылки. Но на этот раз включаем в него только адреса читателей, которые согласились на рассылку.
         // Дополнительно нужно проверить, что читатель взял из библиотеки больше одной книги.
         List<EmailAddress> emailList = library.getReaderList()
-                .stream().filter(Reader::getAgreed)
-                .filter(reader -> reader.getBookList().size() > 1)
-                .map(Reader::getEmail).toList();
+                                              .stream().filter(Reader::getAgreed)
+                                              .filter(reader -> reader.getBookList().size() > 1)
+                                              .map(Reader::getEmail).toList();
         emailList.forEach(System.out::println);
         //d) Получить список всех книг, взятых читателями.
         // Список не должен содержать дубликатов (книг одного автора, с одинаковым названием и годом издания).
         List<Book> bookList1 = library.getReaderList()
-                .stream().flatMap(reader -> reader.getBookList().stream())
-                .distinct()
-                .toList();
+                                      .stream().flatMap(reader -> reader.getBookList().stream())
+                                      .distinct()
+                                      .toList();
         bookList1.forEach(System.out::println);
         //e) Проверить, взял ли кто-то из читателей библиотеки какие-нибудь книги Пушкина Александра Сергеевича.
         Boolean hasStevenKingBooks = library.getReaderList()
-                .stream()
-                .flatMap(reader -> reader.getBookList().stream())
-                .anyMatch(book -> book.getAuthor().equals("Стивен Кинг"));
+                                            .stream()
+                                            .flatMap(reader -> reader.getBookList().stream())
+                                            .anyMatch(book -> book.getAuthor().equals("Стивен Кинг"));
         System.out.println(hasStevenKingBooks);
         //*  Задачи со ЗВЕЗДОЧКОЙ:
         //     *  а) Узнать наибольшее число книг, которое сейчас на руках у читателя.
@@ -118,25 +118,25 @@ public class Task6 {
         tooMuchReaderList.forEach(System.out::println);
         String okay = okReaderList
                 .stream()
-                .map(reader -> (String.join(" , ", reader.getName() + " " + reader.getSurname())))
+                .map(reader -> String.join(" , ", reader.getName() + " " + reader.getSurname()))
                 .collect(Collectors.joining(", ", "{", "}"));
         System.out.println(okay);
         String tooMuch = tooMuchReaderList
                 .stream()
-                .map(reader -> (String.join(" , ", reader.getName() + " " + reader.getSurname())))
+                .map(reader -> String.join(" , ", reader.getName() + " " + reader.getSurname()))
                 .collect(Collectors.joining(", ", "{", "}"));
         System.out.println(tooMuch);
     }
 
     private static Map<Flag, List<EmailAddress>> getGroup(Library library) {
         List<EmailAddress> tooMuch = library.getReaderList()
-                .stream()
-                .filter(reader -> reader.getBookList().size() >= 2)
-                .map(Reader::getEmail).toList();
+                                            .stream()
+                                            .filter(reader -> reader.getBookList().size() >= 2)
+                                            .map(Reader::getEmail).toList();
         List<EmailAddress> ok = library.getReaderList()
-                .stream()
-                .filter(reader -> reader.getBookList().size() < 2)
-                .map(Reader::getEmail).toList();
+                                       .stream()
+                                       .filter(reader -> reader.getBookList().size() < 2)
+                                       .map(Reader::getEmail).toList();
         Map<Flag, List<EmailAddress>> result = new HashMap<>();
         result.put(Flag.OK, ok);
         result.put(Flag.TOO_MUCH, tooMuch);

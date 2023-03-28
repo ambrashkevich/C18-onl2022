@@ -1,6 +1,7 @@
 package abs;
 
 public abstract class RobotParts implements IPrice {
+
     private final int price;
 
     public RobotParts(int price) {

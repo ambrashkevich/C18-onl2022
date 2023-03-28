@@ -14,17 +14,18 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("Основной поток стартанул");
         try {
             List<Cashier> cashiers = IntStream.range(0, 5)
-                    .boxed()
-                    .map(x -> new Cashier("Кассе №" + x))
-                    .toList();
+                                              .boxed()
+                                              .map(x -> new Cashier("Кассе №" + x))
+                                              .toList();
 
             for (int i = 1; i <= 20; i++) {
                 Buyer buyer = new Buyer("\t" + "Number " + i,
-                        cashiers, Arrays.stream(ProductType.values()).toList());
+                                        cashiers, Arrays.stream(ProductType.values()).toList());
                 buyer.start();
                 Thread.sleep(1500);
             }

@@ -1,6 +1,7 @@
 package clothes.jacket;
 
 public class PumaJacket implements IJacket {
+
     @Override
     public void putOn() {
         System.out.println("Put on a puma jacket");

@@ -8,11 +8,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task3 {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int maxValue;
-        int minValue;
-        double average;
+        final int maxValue;
+        final int minValue;
+        final double average;
         double number = 0;
         System.out.println("Введите размер массива");
         int[] array = new int[scanner.nextInt()];
