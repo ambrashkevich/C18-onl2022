@@ -1,86 +1,36 @@
 package tms.example;
 
-import java.util.Random;
-import java.util.concurrent.locks.ReentrantLock;
+//**
+// * Напишите программу, моделирующую кассы в магазине.
+// * Существует несколько касс, работающих одновременно.
+// * Каждый покупатель — отдельный поток.
+// * Общее количество покупателей может быть больше, чем количество касс,
+// * но одновременно не может обрабатываться больше покупателей, чем имеется рабочих касс.
+// * У каждого покупателя есть набор товаров, которые должны быть выведены на консоль в процессе обслуживания.
+// */
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class Main {
 
     public static void main(String[] args) {
-        CashDesk[] cashDesk = {new CashDesk("кассе №1"), new CashDesk("кассе №2"),
-                new CashDesk("кассе №3")};
-        String[] goods = {"огурцы", "pepsi", "сосиски", "молоко", "хлеб"};
-        for (int i = 1; i <= 25; i++)
-            new Buyer("№" + i, cashDesk, goods);
-    }
-}
-
-class CashDesk {
-    private String cashDeskName;
-    private ReentrantLock lock;
-
-    CashDesk(String cashDeskName) {
-        this.cashDeskName = cashDeskName;
-        lock = new ReentrantLock();
-    }
-
-    private String getCashDeskName() {
-        return this.cashDeskName;
-    }
-
-    String getGoods(Buyer buyer) {
-        StringBuilder result = new StringBuilder();
-        Random rand = new Random();
-        int item = rand.nextInt(buyer.getGoods().length);
-        lock.lock();
+        System.out.println("Основной поток стартанул");
         try {
-            for (; item < buyer.getGoods().length; item++) {
-                if (item != buyer.getGoods().length - 1) {
-                    result.append(buyer.getGoods()[item]).append(", ");
-                } else {
-                    result.append(buyer.getGoods()[item]);
-                }
+            List<Cashier> cashiers = IntStream.range(0, 5)
+                                              .boxed()
+                                              .map(x -> new Cashier("Кассе №" + x))
+                                              .toList();
+
+            for (int i = 1; i <= 20; i++) {
+                Buyer buyer = new Buyer("\t" + "Number " + i,
+                                        cashiers, Arrays.stream(ProductType.values()).toList());
+                buyer.start();
+                Thread.sleep(1500);
             }
-            Thread.sleep((int) (Math.random() * 100));
         } catch (InterruptedException e) {
-            e.printStackTrace();
-        } finally {
-            lock.unlock();
-        }
-        return "Покупатель " + buyer.getName() + " купил: " + result + " в " + this.getCashDeskName();
-    }
-
-    ReentrantLock getLock() {
-        return lock;
-    }
-}
-
-class Buyer extends Thread {
-    private CashDesk[] cashDesks;
-    private String[] goods;
-
-    Buyer(String name, CashDesk[] cashDesks, String[] goods) {
-        super(name);
-        this.cashDesks = cashDesks;
-        this.goods = goods;
-        this.start();
-    }
-
-    String[] getGoods() {
-        return this.goods;
-    }
-
-    @Override
-    public void run() {
-        CashDesk chosenCashDesk = cashDesks[0];
-        while (true) {
-            for (CashDesk cashDesk : cashDesks) {
-                if (cashDesk.getLock().getQueueLength() < chosenCashDesk.getLock().getQueueLength()) {
-                    chosenCashDesk = cashDesk;
-                    break;
-                }
-            }
-            System.out.println(chosenCashDesk.getGoods(this));
-            if (this.isAlive()) break;
+            System.out.println(e.getMessage() + " error has occurred");
         }
     }
 }

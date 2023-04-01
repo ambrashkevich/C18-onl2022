@@ -1,6 +1,7 @@
 package by.tms.task2;
 
 public class TextFormatter {
+
     public int getNumberOfWords(String str) {
         String[] words = str.split(" ");
         return words.length;
@@ -14,10 +15,10 @@ public class TextFormatter {
     public boolean isPalindromeInString(String[] str) {
         boolean result = false;
         for (String word : str) {
-            String sLowerCase = word.toLowerCase();
-            StringBuilder stringBuilder = new StringBuilder(sLowerCase);
+            String stringLowerCase = word.toLowerCase();
+            StringBuilder stringBuilder = new StringBuilder(stringLowerCase);
             StringBuilder reverse = stringBuilder.reverse();
-            return (reverse.toString()).equals(sLowerCase);
+            return (reverse.toString()).equals(stringLowerCase);
         }
         return false;
     }

@@ -1,14 +1,13 @@
 package by.tms.model;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
-
-import java.util.List;
-
 
 @AllArgsConstructor
 @ToString
 public class Reader {
+
     private String name;
     private String surname;
     private EmailAddress email;

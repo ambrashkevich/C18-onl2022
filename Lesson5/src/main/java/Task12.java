@@ -1,8 +1,10 @@
 //заполнить рандомно 2-х мерный массив и посчитать сумму элементов на диагонали
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Random;
 
 public class Task12 {
+
     public static void main(String[] args) {
         calculateSumOfDiagonalElements();
     }

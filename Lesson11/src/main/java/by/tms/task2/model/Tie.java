@@ -4,6 +4,7 @@ import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 public class Tie extends Clothing implements IMensClothing {
+
     public Tie(Size size, String color, int price) {
         super(size, color, price);
     }

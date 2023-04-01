@@ -6,6 +6,7 @@ import by.tms.Warrior;
 import by.tms.Wizard;
 
 public class HumansSquadFactory implements SquadFactory {
+
     @Override
     public Archer getArcher() {
         return new HumansArchers();

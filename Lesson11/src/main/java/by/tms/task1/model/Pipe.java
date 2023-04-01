@@ -4,6 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class Pipe implements IInstrument {
+
     private int diameter;
 
     public Pipe(int diameter) {

@@ -1,48 +1,48 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    font-family: 'Barlow', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Barlow', sans-serif;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../img/wallpaperflare.com_wallpaper.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/wallpaperflare.com_wallpaper.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .table-container {
-    width: 80%;
-    z-index: 100;
+  width: 80%;
+  z-index: 100;
 }
 
 .buttons {
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(30px);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-    outline: none;
-    margin: 5px;
-    padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  margin: 5px;
+  padding: 10px;
 
 }
 
 div {
-    text-align: center;
+  text-align: center;
 }
 
 .buttons:hover {
-    border-color: #ffffff;
+  border-color: #ffffff;
 }

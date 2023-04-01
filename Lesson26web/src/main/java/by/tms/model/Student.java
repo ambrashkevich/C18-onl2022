@@ -6,6 +6,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Student {
+
     private int id;
     private String firstName;
     private String lastName;

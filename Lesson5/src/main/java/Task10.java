@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 
 public class Task10 {
+
     public static void main(String[] args) {
         int[] array = new int[]{4, 5, 0, 23, 77, 0, 8, 9, 101, 2};
         int currentMax = array[0];

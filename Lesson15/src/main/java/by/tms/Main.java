@@ -4,19 +4,24 @@ import by.tms.task2.TextFormatter;
 import by.tms.task4.model.Car;
 import by.tms.task4.model.Engine;
 import by.tms.task4.model.GasTank;
-
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.PrintStream;
 
 public class Main {
+
     public static void main(String[] args) {
         {
             //В исходном файле hw1/blackList.txt находятся слова, каждое слово на новой строке.
             //После запуска программы должен создать файл output.txt, который будет содержать в себе только палиндромы.
             try (FileInputStream fis = new FileInputStream("Lesson15/src/main/java/by/tms/task1/input.txt");
-                 //Считываем с файла
-                 FileOutputStream fos = new FileOutputStream("Lesson15/src/main/java/by/tms/task1/output.txt");
-                 //Запись в новый файл
-                 PrintStream printStream = new PrintStream(fos)) {
+                    //Считываем с файла
+                    FileOutputStream fos = new FileOutputStream("Lesson15/src/main/java/by/tms/task1/output.txt");
+                    //Запись в новый файл
+                    PrintStream printStream = new PrintStream(fos)) {
                 byte[] buffer = new byte[fis.available()];
                 //Считываем файл в буфер
                 fis.read(buffer);
@@ -49,14 +54,14 @@ public class Main {
         TextFormatter textFormatter = new TextFormatter();
         {
             try (FileInputStream fis = new FileInputStream("Lesson15/src/main/java/by/tms/task2/input.txt");
-                 FileOutputStream fos = new FileOutputStream("Lesson15/src/main/java/by/tms/task2/output.txt");
-                 PrintStream printStream = new PrintStream(fos)) {
+                    FileOutputStream fos = new FileOutputStream("Lesson15/src/main/java/by/tms/task2/output.txt");
+                    PrintStream printStream = new PrintStream(fos)) {
                 byte[] buffer = new byte[fis.available()];
                 fis.read(buffer);
                 String inputText = new String(buffer).replaceAll("-\\s+", "");
                 String[] sentences = inputText.split("[.!?]");
                 for (String sentence : sentences) {
-                    int quantity = (textFormatter.getNumberOfWords(sentence));
+                    int quantity = textFormatter.getNumberOfWords(sentence);
                     if (quantity >= 3 && quantity <= 5 || textFormatter.isPalindromeInString(sentence.split(" "))) {
                         printStream.println(sentence.trim());
                     }
@@ -75,7 +80,7 @@ public class Main {
          */
         {
             try (FileInputStream fisList = new FileInputStream("Lesson15/src/main/java/by/tms/task1/text.txt");
-                 FileInputStream fisCheck = new FileInputStream("Lesson15/src/main/java/by/tms/task1/blacklist.txt")) {
+                    FileInputStream fisCheck = new FileInputStream("Lesson15/src/main/java/by/tms/task1/blacklist.txt")) {
                 byte[] buffer = new byte[fisList.available()];
                 fisList.read(buffer);
                 String text = new String(buffer).replaceAll("\\n", "");
@@ -109,13 +114,13 @@ public class Main {
          */
         {
             try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Lesson15/src/main/java/by/tms/task4/service/car.dat"));
-                 ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Lesson15/src/main/java/by/tms/task4/service/car.dat"))) {
+                    ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Lesson15/src/main/java/by/tms/task4/service/car.dat"))) {
                 Car car = new Car("bmw", new Engine("1.9 tdi", 4), new GasTank(100, "diesel"), 200, 15000);
                 oos.writeObject(car);
                 Car bmw = (Car) ois.readObject();
                 System.out.printf("Model: %s\nEngine type: %s\nGas tank:\nTotal volume: %.1f\nFuel type: %s\nMax speed: %s\nPrice: %s",
-                        bmw.getBrand(), bmw.getEngine().getEngineType(), bmw.getGasTank().getVolumeCount(), bmw.getGasTank().getOilType(),
-                        bmw.getMaxSpeed(), bmw.getPrice());
+                                  bmw.getBrand(), bmw.getEngine().getEngineType(), bmw.getGasTank().getVolumeCount(), bmw.getGasTank().getOilType(),
+                                  bmw.getMaxSpeed(), bmw.getPrice());
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

@@ -11,8 +11,8 @@ import robot.legs.ILegs;
 @Getter
 @Setter
 
-
 public class Robot implements IRobot {
+
     private IHead head;
     private IHand hand;
     private ILegs leg;
@@ -28,6 +28,4 @@ public class Robot implements IRobot {
     public int getPrice() {
         return head.getPrice() + hand.getPrice() + leg.getPrice();
     }
-
-
 }

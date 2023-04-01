@@ -3,6 +3,7 @@
 //всех элементов массива.
 
 public class Task10 {
+
     public static void main(String[] args) {
         int sum = 0;
         int[][] array = new int[2][2];

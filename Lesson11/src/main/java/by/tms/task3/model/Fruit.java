@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public abstract class Fruit {
+
     private double weight;
     private double price;
 

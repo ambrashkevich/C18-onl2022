@@ -1,18 +1,26 @@
 package by.tms.model;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 @EqualsAndHashCode
 public class User {
-    private String email;
+
+    private Integer id;
+    private String login;
     private String password;
+    private ROLE role;
 
     public User() {
-        email = "test@gmail.com";
-        password = "12345";
+
+    }
+
+    public enum ROLE {
+        USER, ADMIN, UNKNOWN
     }
 }

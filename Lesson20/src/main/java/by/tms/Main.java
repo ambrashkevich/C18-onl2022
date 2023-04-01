@@ -2,11 +2,11 @@ package by.tms;
 
 import by.tms.model.Toy;
 import by.tms.service.MapIteration;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
+
     public static void main(String[] args) {
         Map<String, Toy> toyMap = new HashMap<>();
         fillMap(toyMap);

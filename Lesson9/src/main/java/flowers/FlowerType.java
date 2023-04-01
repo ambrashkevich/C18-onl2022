@@ -13,7 +13,6 @@ public enum FlowerType {
     TULIP(8),
     CACTUS(1),
     CARNATION(11);
-
     private final int price;
 }
 

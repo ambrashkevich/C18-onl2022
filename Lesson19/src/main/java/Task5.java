@@ -1,9 +1,13 @@
 import by.tms.model.Person;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Task5 {
+
     /**
      * 5) Задан список сотрудников, которые хранятся в коллекции List<p3.Person>.
      * Объект p3.Person содержит имя и фамилию(по желанию другие данные)
@@ -31,14 +35,14 @@ public class Task5 {
 
     public static Optional<String> getSortedSurname(List<Person> people) {
         return people.stream()
-                .map(Person::getSurName)
-                .filter(name -> name.startsWith("Д"))
-                .reduce((left, right) -> left + " " + right);
+                     .map(Person::getSurName)
+                     .filter(name -> name.startsWith("Д"))
+                     .reduce((left, right) -> left + " " + right);
     }
 
     public static Set<Map.Entry<Character, Long>> getNumberOfEmployeesByFirstLetter(List<Person> employees) {
         Map<Character, Long> resultList = employees.stream()
-                .collect(Collectors.groupingBy(employee -> employee.getSurName().charAt(0), Collectors.counting()));
+                                                   .collect(Collectors.groupingBy(employee -> employee.getSurName().charAt(0), Collectors.counting()));
         return resultList.entrySet();
     }
 }

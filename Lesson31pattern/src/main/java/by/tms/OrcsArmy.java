@@ -3,6 +3,7 @@ package by.tms;
 import by.tms.orcsquad.OrcsSquadFactory;
 
 public class OrcsArmy {
+
     public static void main(String[] args) {
         SquadFactory squadFactory = new OrcsSquadFactory();
         Archer archer = squadFactory.getArcher();

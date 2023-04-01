@@ -6,6 +6,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 public class Rectangle extends Figure implements ISquare {
+
     private int sideA;
     private int sideB;
 

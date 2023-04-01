@@ -1,6 +1,7 @@
 package shuttle;
 
 public class Shuttle implements IStart {
+
     @Override
     public boolean checkSystem() {
         int randomNumber = (int) (Math.random() * 11);
@@ -10,7 +11,7 @@ public class Shuttle implements IStart {
     @Override
     public void starEngine() {
         System.out.println("«Двигатели Шатл запущены.\n" +
-                "Все системы в норме.»");
+                                   "Все системы в норме.»");
     }
 
     @Override

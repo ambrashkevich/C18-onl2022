@@ -1,6 +1,7 @@
 package shuttle;
 
 public class Main {
+
     public static void main(String[] args) {
         Cosmodrom cosmodrom = new Cosmodrom();
         cosmodrom.start(new Shuttle());

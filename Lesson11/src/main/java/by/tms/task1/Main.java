@@ -1,13 +1,16 @@
 package by.tms.task1;
 
+import static by.tms.task1.model.IInstrument.Type.DRUM;
+import static by.tms.task1.model.IInstrument.Type.GUITAR;
+import static by.tms.task1.model.IInstrument.Type.PIPE;
+
 import by.tms.task1.model.Drum;
 import by.tms.task1.model.Guitar;
 import by.tms.task1.model.IInstrument;
 import by.tms.task1.model.Pipe;
 
-import static by.tms.task1.model.IInstrument.Type.*;
-
 public class Main {
+
     public static void main(String[] args) {
         /**
          * Задача1:
@@ -23,23 +26,23 @@ public class Main {
          *       "Играет такой-то инструмент, с такими-то характеристиками".
          */
 
-        for (IInstrument iInstrument : createInstruments(GUITAR, DRUM, PIPE)) {
-            iInstrument.play();
+        for (IInstrument instrument : createInstruments(GUITAR, DRUM, PIPE)) {
+            instrument.play();
             System.out.println();
         }
     }
 
     public static IInstrument[] createInstruments(IInstrument.Type... types) {
-        IInstrument[] iInstruments = new IInstrument[types.length];
+        IInstrument[] instruments = new IInstrument[types.length];
         for (int i = 0; i < types.length; i++) {
             if (types[i] == GUITAR) {
-                iInstruments[i] = new Guitar(6);
+                instruments[i] = new Guitar(6);
             } else if (types[i] == DRUM) {
-                iInstruments[i] = new Drum(50);
+                instruments[i] = new Drum(50);
             } else {
-                iInstruments[i] = new Pipe(10);
+                instruments[i] = new Pipe(10);
             }
         }
-        return iInstruments;
+        return instruments;
     }
 }

@@ -1,6 +1,7 @@
 package shuttle;
 
 public class RosCosmos implements IStart {
+
     @Override
     public boolean checkSystem() {
         int randomNumber1 = checkValue();

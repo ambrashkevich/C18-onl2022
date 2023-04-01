@@ -1,12 +1,16 @@
 package by.tms.jdbc.utils;
 
 import by.tms.jdbc.model.City;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CityUtils {
+
     private static final String GET_ALL_CITY_QUERY = "SELECT * FROM City";
     private static final String INSERT_CITY_QUERY = "INSERT INTO City(id,namecity, description) VALUES(?, ?,?);";
     private static final String DELETE_CITY_QUERY = "DELETE FROM City WHERE id = ?";

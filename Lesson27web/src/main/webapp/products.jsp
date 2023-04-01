@@ -22,9 +22,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Главная</a>
-                <a class="nav-link" href="#">Пользователь</a>
-                <a class="nav-link" href="#">Корзина</a>
+                <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
+                <a class="nav-link" href="cart.jsp">Cart</a>
+                <a class="nav-link" href="#">Profile</a>
             </div>
         </div>
     </div>
@@ -47,6 +47,8 @@
                         <h5>Description: </h5>
                         <p>${product.getDescription()}</p>
                         <h5>Price: ${product.getPrice()}$</h5>
+                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                        <button type="button" class="btn btn-successs">Buy Now</button>
                     </div>
                 </div>
             </c:forEach>

@@ -4,8 +4,10 @@
 //сообщите, для какого из массивов это значение оказалось больше (либо
 //сообщите, что их средние арифметические равны).
 public class Task4 {
+
     public static void main(String[] args) {
-        double sumNumberFirst = 0, sumNumberTwo = 0;
+        double sumNumberFirst = 0;
+        double sumNumberTwo = 0;
         sumNumberFirst = getSumNumberFirst(sumNumberFirst);
         sumNumberTwo = getSumNumberFirst(sumNumberTwo);
         if (sumNumberFirst == sumNumberTwo) {

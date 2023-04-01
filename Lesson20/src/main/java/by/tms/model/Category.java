@@ -1,15 +1,15 @@
 package by.tms.model;
 
+import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.Set;
 
 @Getter
 @Setter
 @ToString
 public class Category {
+
     private String nameCategory;
     private Set<Product> productSet;
 

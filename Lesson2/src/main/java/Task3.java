@@ -1,4 +1,5 @@
 public class Task3 {
+
     public static void main(String[] args) {
         //Некоторые тесты для проверки задач.
         System.out.println(sum(100, 200));

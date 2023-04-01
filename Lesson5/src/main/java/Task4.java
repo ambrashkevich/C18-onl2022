@@ -3,6 +3,7 @@
 import java.util.Scanner;
 
 public class Task4 {
+
     public static void main(String[] args) {
         int month, day;
         Scanner c = new Scanner(System.in);

@@ -8,7 +8,6 @@ public class SamsungHead extends RobotParts implements IHead {
         super(price);
     }
 
-
     @Override
     public void speek() {
         System.out.println("Говорит голова Samsung");

@@ -11,6 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Car {
+
     private String brand;
     private double maxSpeed;
     private double price;

@@ -4,6 +4,7 @@ import by.tms.task2.services.WrongLoginException;
 import by.tms.task2.services.WrongPasswordException;
 
 public class Main {
+
     public static void main(String[] args) {
         /**
          * Создать статический метод "checkAuthorization" который будет вызваться из метода main и принимает на вход три параметра: login, password и confirmPassword. Поле login должен содержать:

@@ -3,6 +3,7 @@
 ////        Например, Введите число: 5
 ////        "5 - это положительное число, количество цифр = 1"
 public class Task3 {
+
     public static void main(String[] args) {
         int value = -1;
         if (value > 0) {

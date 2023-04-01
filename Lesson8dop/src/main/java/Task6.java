@@ -5,14 +5,16 @@
 public class Task6 {
 
     public static void main(String[] args) {
-        int[] Mas = new int[8];
-        for (int i = 0; i < Mas.length; i++) {
-            Mas[i] = (int) (Math.random() * 9 + 1);
-            System.out.print(Mas[i] + " ");
+        int[] value = new int[8];
+        for (int i = 0; i < value.length; i++) {
+            value[i] = (int) (Math.random() * 9 + 1);
+            System.out.print(value[i] + " ");
         }
-        for (int i = 0; i < Mas.length; i++) {
-            if (Mas[i] % 2 != 0) Mas[i] = 0;
-            System.out.print(Mas[i] + "");
+        for (int i = 0; i < value.length; i++) {
+            if (value[i] % 2 != 0) {
+                value[i] = 0;
+                System.out.print(value[i] + "");
+            }
         }
     }
 }

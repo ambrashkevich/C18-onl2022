@@ -1,8 +1,14 @@
 package by.tms.task3;
 
-import by.tms.task3.model.*;
+import static by.tms.task3.model.FruitType.APPLE;
+import static by.tms.task3.model.FruitType.APRICOT;
+import static by.tms.task3.model.FruitType.PEAR;
 
-import static by.tms.task3.model.FruitType.*;
+import by.tms.task3.model.Apple;
+import by.tms.task3.model.Apricot;
+import by.tms.task3.model.Fruit;
+import by.tms.task3.model.FruitType;
+import by.tms.task3.model.Pear;
 
 /**
  * Задача3
@@ -17,6 +23,7 @@ import static by.tms.task3.model.FruitType.*;
  * А также общую стоимость отдельно проданных яблок, груш и абрикос.
  */
 public class Main {
+
     public static void main(String[] args) {
         Fruit[] fruits = new Fruit[9];
         fruits[0] = new Apple(10, 0.11);

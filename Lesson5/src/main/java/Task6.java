@@ -15,6 +15,7 @@
 import java.util.Arrays;
 
 public class Task6 {
+
     public static void main(String[] args) {
         char[][] drawingBoard = new char[6][6];
         for (int i = 0; i < drawingBoard.length; i++) {

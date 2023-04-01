@@ -10,6 +10,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Bouquet {
+
     private Flower[] flowers;
 
     public int getPrice() {

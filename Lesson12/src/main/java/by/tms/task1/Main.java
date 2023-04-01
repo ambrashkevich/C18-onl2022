@@ -4,6 +4,7 @@ import by.tms.task1.model.Car;
 import by.tms.task1.service.CarIsNotStarException;
 
 public class Main {
+
     public static void main(String[] args) {
         Car mercedes = new Car("Mercedes", 100, 25000);
         try {

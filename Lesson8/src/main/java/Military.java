@@ -15,14 +15,14 @@
 //    5) Создать класс Main, наполнить PersonRegistry людьми, по желанию можно создавать людей через консоль
 //    */
 
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Getter
 @Setter
 public class Military {
+
     public static void main(String[] args) {
 
         PersonRegistry personRegistry = new PersonRegistry(
@@ -50,6 +50,7 @@ public class Military {
 
 
 class Person {
+
     private String name;
     private int age;
     private Sex sex;
@@ -109,6 +110,7 @@ class Person {
 }
 
 class PersonRegistry {
+
     List<Person> personList;
 
     PersonRegistry(List<Person> personList) {
@@ -118,6 +120,7 @@ class PersonRegistry {
 }
 
 class MilitaryOffice {
+
     PersonRegistry registry;
 
     MilitaryOffice(PersonRegistry registry) {

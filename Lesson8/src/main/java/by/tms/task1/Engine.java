@@ -8,6 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Engine {
+
     private final String enginesType;
     private final double volume;
     private boolean isMotorOn;

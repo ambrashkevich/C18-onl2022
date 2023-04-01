@@ -1,6 +1,7 @@
 package by.tms.task2.model;
 
 public class Atelier {
+
     private Clothing[] clothing;
 
     public Atelier(Clothing[] clothing) {

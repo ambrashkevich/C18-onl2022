@@ -44,9 +44,9 @@ public class Run {
         }
         Robot maxPriceRobot = (Robot) robots[maxPriceIndex];
         System.out.printf("Самый дорогой робот стоит %d у.е. и состоит из головы %s, рук %s и ног %s \n", maxPrice,
-                maxPriceRobot.getHead().getClass().getSimpleName(),
-                maxPriceRobot.getHand().getClass().getSimpleName(),
-                maxPriceRobot.getLeg().getClass().getSimpleName());
+                          maxPriceRobot.getHead().getClass().getSimpleName(),
+                          maxPriceRobot.getHand().getClass().getSimpleName(),
+                          maxPriceRobot.getLeg().getClass().getSimpleName());
     }
 
 }

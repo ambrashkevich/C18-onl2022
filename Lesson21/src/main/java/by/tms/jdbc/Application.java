@@ -5,8 +5,8 @@ import by.tms.jdbc.model.Student;
 import by.tms.jdbc.utils.CRUDUtils;
 import by.tms.jdbc.utils.CityUtils;
 
-
 public class Application {
+
     public static void main(String[] args) {
         Student student = new Student(7, "Ivanov", "Ivanovich", 3);
         System.out.println("Saved students:");

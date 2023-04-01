@@ -1,9 +1,12 @@
 package flowers;
 
 import static flowers.Flower.getCount;
-import static flowers.FlowerType.*;
+import static flowers.FlowerType.ASTER;
+import static flowers.FlowerType.GERBER;
+import static flowers.FlowerType.ROSE;
 
 public class Main {
+
     public static void main(String[] args) {
         FlowerMarket flowerMarket = new FlowerMarket();
         Bouquet[] bouquets = new Bouquet[5];
