@@ -67,6 +67,13 @@
             <version>2.3.3</version>
             <scope>provided</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.0.7</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -196,5 +203,7 @@
         <module>Lesson27web</module>
         <module>Lesson30web</module>
         <module>Lesson31pattern</module>
+        <module>Lesson32web</module>
+        <module>Lesson36</module>
     </modules>
 </project>
