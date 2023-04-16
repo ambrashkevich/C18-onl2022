@@ -1,4 +1,4 @@
-package eshop.models;
+package loginform.models;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

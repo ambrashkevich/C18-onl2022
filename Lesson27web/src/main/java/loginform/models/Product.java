@@ -1,4 +1,4 @@
-package eshop.model;
+package loginform.models;
 
 import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
@@ -13,9 +13,9 @@ import lombok.ToString;
 public class Product {
 
     private int id;
-    private String imageName;
     private String name;
     private String description;
     private BigDecimal price;
-    private int categoryId;
+    private String imageName;
+
 }

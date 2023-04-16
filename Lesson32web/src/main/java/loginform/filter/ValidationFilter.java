@@ -27,7 +27,6 @@ public class ValidationFilter implements Filter {
             Integer month = Integer.valueOf(request.getParameter("brthMonth"));
             LocalDate brthDate = LocalDate.of(year, month, dayOfMonth);
             String password = request.getParameter("newUsrPass");
-            System.out.println(name);
             if (ValidationUtil.isValidName(name, surname) && ValidationUtil.isValidPassword(password) && ValidationUtil.isValidAge(brthDate) && ValidationUtil.isValidEmail(email)) {
                 request.setAttribute("isValid", true);
                 filterChain.doFilter(servletRequest, servletResponse);

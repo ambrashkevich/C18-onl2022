@@ -1,6 +1,5 @@
-package eshop.servletsexample;
+package loginform.servletsexample;
 
-import eshop.models.Product;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
@@ -9,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import loginform.models.Product;
 
 @WebServlet("/category")
 public class CategoryServlet extends HttpServlet {

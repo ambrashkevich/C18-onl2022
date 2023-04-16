@@ -1,7 +1,5 @@
-package eshop.servlets;
+package loginform.servlets;
 
-import eshop.dao.UserDAO;
-import eshop.model.User;
 import java.io.IOException;
 import java.time.LocalDate;
 import javax.servlet.ServletException;
@@ -9,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import loginform.dao.UserDAO;
+import loginform.model.User;
 
 /*@WebServlet(“/register”)
 public class RegistrationServlet (){}

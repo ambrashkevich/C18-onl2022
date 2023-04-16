@@ -38,40 +38,14 @@ public class CategoryServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String category = req.getParameter("name");
         List<Product> products = getProducts(category);
-        //   System.out.println(products.toString());
         req.getSession().setAttribute("products", products);
         resp.sendRedirect("products.jsp");
-//        req.getRequestDispatcher("/products.jsp").forward(req, resp);
     }
 
     public List<Product> getProducts(String category) {
         if ("Mobile phones".equalsIgnoreCase(category)) {
-            return List.of(new Product(12, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "mobile phones"),
-                           new Product(13,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "galaxym13.jpg",
-                                       "Mobile phone"),
-                           new Product(13,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "galaxym53.jpg",
-                                       "Mobile phone"),
-                           new Product(14,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "iphone11.jpeg",
-                                       "Mobile phone"),
-                           new Product(14,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "iphone14pro.jpeg",
-                                       "Mobile phone"),
-                           new Product(14,
+            return List.of(new Product(1, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "mobile phones"),
+                           new Product(2,
                                        "Samsung Galaxy M53 5G",
                                        "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
                                        new BigDecimal(1100),
@@ -80,49 +54,14 @@ public class CategoryServlet extends HttpServlet {
 
         }
         if ("Laptops".equalsIgnoreCase(category)) {
-            return List.of(new Product(12, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "laptops"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym13.jpg", "Laptops"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "Laptops"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "Laptops"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "Laptops"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "Laptops"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "Laptops"));
+            return List.of(new Product(3, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "laptops"),
+                           new Product(4, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "Laptops"));
 
 
         }
         if ("GPS Navigators".equalsIgnoreCase(category)) {
-            return List.of(new Product(12, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "GPS navigator"),
-                           new Product(13,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "galaxym13.jpg",
-                                       "GPS navigator"),
-                           new Product(13,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "galaxym53.jpg",
-                                       "GPS navigator"),
-                           new Product(14,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "galaxym53.jpg",
-                                       "GPS navigator"),
-                           new Product(14,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "galaxym53.jpg",
-                                       "GPS navigator"),
-                           new Product(14,
-                                       "Samsung Galaxy M53 5G",
-                                       "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
-                                       new BigDecimal(1100),
-                                       "galaxym53.jpg",
-                                       "GPS navigator"),
-                           new Product(14,
+            return List.of(new Product(5, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "GPS navigator"),
+                           new Product(6,
                                        "Samsung Galaxy M53 5G",
                                        "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68",
                                        new BigDecimal(1100),
@@ -132,34 +71,19 @@ public class CategoryServlet extends HttpServlet {
 
         }
         if ("fridges".equalsIgnoreCase(category)) {
-            return List.of(new Product(12, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "fridges"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym13.jpg", "fridges"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "fridges"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "fridges"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "fridges"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "fridges"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "fridges"));
+            return List.of(new Product(7, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "fridges"),
+                           new Product(8, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "fridges"));
 
 
         }
         if ("cars".equalsIgnoreCase(category)) {
-            return List.of(new Product(12, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "cars"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym13.jpg", "cars"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "cars"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "cars"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 90, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "cars"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "cars"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "cars"));
+            return List.of(new Product(9, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "cars"),
+                           new Product(10, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "cars"));
 
         }
         if ("camera".equalsIgnoreCase(category)) {
-            return List.of(new Product(12, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "camera"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym13.jpg", "camera"),
-                           new Product(13, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "camera"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "camera"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "camera"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "camera"),
-                           new Product(14, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "camera"));
+            return List.of(new Product(11, "Iphone 14", "Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A15 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1300), "iphone14.png", "camera"),
+                           new Product(12, "Samsung Galaxy M53 5G", "Android 12, Super AMOLED Plus 120 Гц, 6,7 дюйма, 1080 х 2408, 20:9, MediaTek MT6877 Dimensity 900, ОЗУ 8 ГБ, память 128 ГБ, камера 12 Мп, 1 SIM (nano-SIM/eSIM), влагозащита IP68", new BigDecimal(1100), "galaxym53.jpg", "camera"));
         }
         return null;
     }

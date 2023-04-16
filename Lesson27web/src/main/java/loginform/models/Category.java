@@ -1,9 +1,8 @@
-package eshop.models;
-
-import lombok.Getter;
-import lombok.Setter;
+package loginform.models;
 
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
