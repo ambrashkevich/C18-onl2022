@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/cabinet.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,29 +27,32 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
-                <a class="nav-link" href="#">Cart</a>
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
+                <a class="nav-link" href="cart.jsp">Cart</a>
+                <a class="nav-link" href="cabinet.jsp">Profile</a>
             </div>
         </div>
     </div>
 
 </nav>
+<h1>Привет, ${sessionScope.name} </h1>
+<hr>
 <div class="container">
     <div class="row">
         <div class="col">
-            ${sessionScope.name}
+            <h2>Name: ${sessionScope.name}</h2>
         </div>
         <div class="col">
-            ${sessionScope.surname}
+            <h2>Surname: ${sessionScope.surname}</h2>
         </div>
         <div class="col">
-            ${sessionScope.brthday}
+            <h2>Date of Birth: ${sessionScope.brthday}</h2>
         </div>
         <div class="col">
-            ${sessionScope.email}
+            <h2>Email: ${sessionScope.email}</h2>
         </div>
     </div>
 </div>
+<hr>
 </body>
 </html>

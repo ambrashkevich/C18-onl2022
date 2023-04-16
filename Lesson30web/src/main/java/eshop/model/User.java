@@ -1,4 +1,4 @@
-package loginform.model;
+package eshop.model;
 
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;

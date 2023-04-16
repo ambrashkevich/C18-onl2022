@@ -47,9 +47,8 @@
                         <h5>Description: </h5>
                         <p>${product.getDescription()}</p>
                         <h5>Price: ${product.getPrice()}$</h5>
-                        <form action="">
-                            <button name="product" value="${product.id}" type="submit" class="btn btn-primary">Add to Cart</button>
-                        </form>
+                        <p><c:out value="${contextPath}"/></p>
+                        <button name="product" value="${product.getId()}" type="submit" class="btn btn-primary">Add to Cart</button>
                         <button type="button" class="btn btn-successs">Buy Now</button>
                     </div>
                 </div>

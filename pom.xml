@@ -13,11 +13,16 @@
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.jupiter.version>5.9.2</junit.jupiter.version>
+        <junit.platform.version>1.9.1</junit.platform.version>
+        <lombok.version>1.18.26</lombok.version>
+        <maven-war-plugin.version>3.3.0</maven-war-plugin.version>
         <spotbugs.maven.plugin.version>4.7.3.2</spotbugs.maven.plugin.version>
         <checkstyle.maven.plugin.version>3.1.1</checkstyle.maven.plugin.version>
         <checkstyle.version>8.30</checkstyle.version>
         <pmd.maven.plugin.version>3.14.0</pmd.maven.plugin.version>
         <pmd.version>6.11.0</pmd.version>
+        <spring-context.version>6.0.7</spring-context.version>
     </properties>
 
     <dependencies>
@@ -66,6 +71,22 @@
             <artifactId>javax.servlet.jsp-api</artifactId>
             <version>2.3.3</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.0-b01</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.5</version>
+        </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>7.3</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
