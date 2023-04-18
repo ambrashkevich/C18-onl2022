@@ -1,7 +1,7 @@
 package transport;
 
-
 public class Main {
+
     public static void main(String[] args) {
         Military military = new Military();
         military.catapultSystem();
@@ -13,5 +13,4 @@ public class Main {
         Passenger passenger = new Passenger();
         passenger.carPassed("BMW", 1, 50, 1);
     }
-
 }

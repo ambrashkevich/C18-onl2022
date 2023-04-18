@@ -31,7 +31,7 @@
         <div><textarea id="info" cols="30" rows="3">Есть опыт программирования на C++</textarea></div>
         </p>
         <p>
-        <div><label for="secret">Секретно слово:</label></div>
+        <div><label for="secret">Секретное слово:</label></div>
         <div><input type="password" id="secret"></div>
         </p>
         <p>
