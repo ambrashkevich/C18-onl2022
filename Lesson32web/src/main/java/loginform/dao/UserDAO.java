@@ -13,8 +13,8 @@ import loginform.model.User;
 
 public class UserDAO {
 
-    private static final String GET_ALL_USERS_QUERY = "SELECT * FROM public.\"table\"";
-    private static final String INSERT_USER_QUERY = "INSERT INTO public.\"table\"(name, surname,birthday,password,email) VALUES(?, ?, ?,?,?);";
+    private static final String GET_ALL_USERS_QUERY = "SELECT * FROM public.\"user\"";
+    private static final String INSERT_USER_QUERY = "INSERT INTO public.\"user\"(name, surname,birthday,password,email) VALUES(?, ?, ?,?,?);";
 
     public static List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
@@ -24,11 +24,11 @@ public class UserDAO {
             ResultSet rs = statement.executeQuery(GET_ALL_USERS_QUERY);
             while (rs.next()) {
 
-                String name = rs.getString("Name");
-                String surname = rs.getString("Surname");
-                LocalDate birthday = rs.getDate("Birthday").toLocalDate();
-                String email = rs.getString("Email");
-                String password = rs.getString("Password");
+                String name = rs.getString("name");
+                String surname = rs.getString("surname");
+                LocalDate birthday = rs.getDate("birthday").toLocalDate();
+                String email = rs.getString("email");
+                String password = rs.getString("password");
                 users.add(new User(password, name, surname, email, birthday));
             }
         } catch (SQLException e) {

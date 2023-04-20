@@ -3,7 +3,11 @@ package loginform.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Cart implements Serializable {
 
     private List<Product> products = new ArrayList<>();

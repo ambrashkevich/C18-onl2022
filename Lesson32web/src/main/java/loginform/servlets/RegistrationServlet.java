@@ -1,5 +1,7 @@
 package loginform.servlets;
 
+import static loginform.util.CategoryHelper.categories;
+
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import loginform.dao.UserDAO;
-import loginform.model.Category;
 import loginform.model.Product;
 import loginform.model.User;
 
@@ -43,7 +44,6 @@ public class RegistrationServlet extends HttpServlet {
         String password = req.getParameter("newUsrPass");
         UserDAO.saveUser(new User(password, name, surname, email, brthDate));
         String encodedURL = resp.encodeRedirectURL("home.jsp");
-        List<Category> categories = getCategories();
         req.getSession().setAttribute("categories", categories);
         resp.sendRedirect(encodedURL);
     }
@@ -51,21 +51,5 @@ public class RegistrationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.sendRedirect("error.jsp");
-    }
-    private List<Category> getCategories() {
-        List<Category> categories = new ArrayList<>();
-        Category mobilePhones = new Category(1, "Mobile phones", "mobile.jpg");
-        Category laptops = new Category(2, "Laptops", "laptop.jpg");
-        Category jpsNavigators = new Category(3, "GPS Navigators", "jps_nav.jpg");
-        Category fridges = new Category(4, "Fridges", "fridge.jpg");
-        Category car = new Category(5, "Cars", "car.jpg");
-        Category camera = new Category(6, "Camera", "camera.jpg");
-        categories.add(mobilePhones);
-        categories.add(laptops);
-        categories.add(jpsNavigators);
-        categories.add(fridges);
-        categories.add(car);
-        categories.add(camera);
-        return categories;
     }
 }
