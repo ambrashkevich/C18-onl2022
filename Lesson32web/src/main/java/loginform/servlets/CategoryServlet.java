@@ -2,7 +2,6 @@ package loginform.servlets;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,11 +17,11 @@ public class CategoryServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getSession().getAttribute("productsCart") == null) {
-            List<Product> productsCart = new ArrayList<>();
+            List<Product> productsCart = ProductHelper.products;
             req.getSession().setAttribute("productsCart", productsCart);
         }
         int productId = Integer.valueOf(req.getParameter("product"));
-        List<Product> productList = (List<Product>) req.getSession().getAttribute("products");
+        List<Product> productList = ProductHelper.products;
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getId() == productId) {
                 List<Product> productListCart = (List<Product>) req.getSession().getAttribute("productsCart");
@@ -35,7 +34,6 @@ public class CategoryServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String category = req.getParameter("name");
         List<Product> products = ProductHelper.products;
         req.getSession().setAttribute("products", products);
         resp.sendRedirect("products.jsp");
