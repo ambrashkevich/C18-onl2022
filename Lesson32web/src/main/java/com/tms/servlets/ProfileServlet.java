@@ -18,7 +18,7 @@ public class ProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("username");
         if (isUserLogIn(user)) {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/profile");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/profile.jsp");
             requestDispatcher.forward(req, resp);
         } else {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("/signin.jsp");

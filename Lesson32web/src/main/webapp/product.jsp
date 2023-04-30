@@ -7,9 +7,10 @@
 <head>
     <title>product</title>
     <jsp:include page="libs.jsp"/>
+    <jsp:include page="header.jsp"/>
 </head>
 <body>
-<jsp:include page="header.jsp"/>
+
 <br>
 <h2>Product</h2><br>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
@@ -45,7 +46,7 @@
             <input type="hidden" value="${oneProduct.getDescription()}" name="description"/>
             <input type="hidden" value="${oneProduct.getPrice()}" name="price"/>
             <input type="hidden" value="${oneProduct.getCategoryId()}" name="categoryId"/>
-            <button type="submit" value="Купить" name="action" class="buttonAddProduct"><i
+            <button type="submit" value="Buy" name="action" class="buttonAddProduct"><i
                     class="fa fa-cart-plus fa-lg"></i> Купить
             </button>
             <br>

@@ -38,7 +38,7 @@ public class ProductServlet extends HttpServlet {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("product.jsp");
             requestDispatcher.forward(req, resp);
         } else {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/signin.gsp");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("signin.gsp");
             requestDispatcher.forward(req, resp);
         }
     }

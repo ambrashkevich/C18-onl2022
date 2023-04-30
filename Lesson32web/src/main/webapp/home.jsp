@@ -13,15 +13,11 @@
     Атрибут initial-scale определяет начальный масштаб страницы при загрузке, значение 1.0 означает, что
     масштаб будет 100% --%>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/color.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <jsp:include page="libs.jsp"/>
+    <jsp:include page="header.jsp"/>
 </head>
 <body>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-<jsp:include page="header.jsp"/>
 <br>
 <h2>Popular categories</h2>
 <div class="container-fluid">

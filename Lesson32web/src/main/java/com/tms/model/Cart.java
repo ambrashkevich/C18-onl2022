@@ -6,8 +6,8 @@ import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 public class Cart implements Serializable {
 
     private List<Product> products = new ArrayList<>();
@@ -19,4 +19,5 @@ public class Cart implements Serializable {
     public void deleteProduct(Product myProduct) {
         products.remove(myProduct);
     }
+
 }

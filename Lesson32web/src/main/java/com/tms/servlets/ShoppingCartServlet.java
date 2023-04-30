@@ -16,17 +16,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebServlet("/cart")
-public class CartServlet extends HttpServlet {
+public class ShoppingCartServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = (User) req.getSession().getAttribute("username");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        User user = (User) request.getSession().getAttribute("username");
         if (isUserLogIn(user)) {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("cart.jsp");
-            requestDispatcher.forward(req, resp);
+            RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
+            rd.forward(request, response);
         } else {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("signin.jsp");
-            requestDispatcher.forward(req, resp);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("signin.jsp");
+            requestDispatcher.forward(request, response);
         }
     }
 
@@ -45,12 +45,12 @@ public class CartServlet extends HttpServlet {
         Product product = new Product(id, imageName, name, description, price, categoryId);
         String action = request.getParameter("action");
         switch (action) {
-            case "Купить" -> {
+            case "Buy" -> {
                 cart.addProduct(product);
                 session.setAttribute("myProducts", cart.getProducts());
                 response.sendRedirect("/product?productId=" + product.getId());
             }
-            case "Удалить" -> {
+            case "Delete" -> {
                 cart.deleteProduct(product);
                 session.setAttribute("myProducts", cart.getProducts());
                 response.sendRedirect("/cart");

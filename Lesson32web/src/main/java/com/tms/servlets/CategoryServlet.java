@@ -35,10 +35,10 @@ public class CategoryServlet extends HttpServlet {
             List<Product> categoryProducts = productService.getProductsByCategoryId(categoryId);
             req.setAttribute("products", categoryProducts);
             req.setAttribute("nameCategory", nameCategory);
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/category.jsp");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("category.jsp");
             requestDispatcher.forward(req, resp);
         } else {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/signin.jsp");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("signin.jsp");
             requestDispatcher.forward(req, resp);
         }
     }
