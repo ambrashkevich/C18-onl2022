@@ -10,26 +10,11 @@
     <link rel="stylesheet" href="styles/profile.css">
 </head>
 <body>
-<h1>Привет, ${sessionScope.name} </h1>
-<hr>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h2>Name: ${sessionScope.name}</h2>
-        </div>
-        <div class="col">
-            <h2>Surname: ${sessionScope.surname}</h2>
-        </div>
-        <div class="col">
-            <h2>Date of Birth: ${sessionScope.brthday}</h2>
-        </div>
-        <div class="col">
-            <h2>Email: ${sessionScope.email}</h2>
-        </div>
-    </div>
-</div>
-<hr>
-<h2>История заказов</h2>
-<hr>
+<br>
+<h3 class="text-center">Добро пожаловать, <b class="font-italic">${username.getName()}</b>!</h3>
+<p class="text-center">Ваш пароль: <b class="font-italic">${username.getPassword()}</b></p>
+<button onclick="window.location.href = 'logout';" class="buttonQuit">
+    <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Выйти
+</button>
 </body>
 </html>

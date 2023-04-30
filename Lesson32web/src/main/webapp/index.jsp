@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<jsp:forward page="sign.jsp"></jsp:forward>
+<jsp:forward page="signin.jsp"/>
 </body>
 </html>
