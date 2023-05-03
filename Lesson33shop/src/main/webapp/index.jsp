@@ -1,3 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <title>Index page</title>
 </head>
 <body>
-<jsp:forward page=""></jsp:forward>
+<jsp:forward page="sign.jsp"></jsp:forward>
 <%--<jsp:forward>	Перенаправление обработки на другой статический ресурс, например сервлет--%>
 </body>
 </html>
