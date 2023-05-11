@@ -19,5 +19,4 @@ public class Cart implements Serializable {
     public void deleteProduct(Product myProduct) {
         products.remove(myProduct);
     }
-
 }

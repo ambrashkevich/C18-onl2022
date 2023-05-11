@@ -1,6 +1,7 @@
-package com.tms.repository;
+package com.tms.repository.impl;
 
 import com.tms.model.Category;
+import com.tms.repository.CategoryRepository;
 import com.tms.util.CategoryHelper;
 import java.util.List;
 

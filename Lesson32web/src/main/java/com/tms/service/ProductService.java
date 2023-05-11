@@ -1,24 +1,13 @@
 package com.tms.service;
 
 import com.tms.model.Product;
-import com.tms.repository.ProductRepository;
 import java.util.List;
-import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
-public class ProductService {
+public interface ProductService {
 
-    private final ProductRepository productRepository;
+    List<Product> getProducts();
 
-    public List<Product> getProducts() {
-        return productRepository.getProducts();
-    }
+    Product getProductById(int id);
 
-    public Product getProductById(int id) {
-        return productRepository.getProductById(id);
-    }
-
-    public List<Product> getProductsByCategoryId(int categoryId) {
-        return productRepository.getProductsByCategoryId(categoryId);
-    }
+    List<Product> getProductsByCategoryId(int categoryId);
 }

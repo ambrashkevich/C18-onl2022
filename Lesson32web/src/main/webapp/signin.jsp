@@ -15,7 +15,7 @@
         <div class="col-md-8 offset-md-4">
             <h2>Login</h2>
             <p>Please, enter your credentials</p>
-            <form method="post" action="${contextPath}/home" class="needs-validation" novalidate>
+            <form method="post" action="/eshop?command=home" class="needs-validation" novalidate>
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" class="form-control w-25" id="username" placeholder="Enter username" name="username"

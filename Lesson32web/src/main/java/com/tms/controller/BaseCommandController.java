@@ -1,5 +1,9 @@
 package com.tms.controller;
 
-public class BaseCommandController {
+import com.tms.model.PagesPath;
+import javax.servlet.http.HttpServletRequest;
 
+public interface BaseCommandController {
+
+    PagesPath execute(HttpServletRequest request) throws Exception;
 }

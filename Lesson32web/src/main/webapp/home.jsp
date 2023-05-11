@@ -30,7 +30,7 @@
                 <div class="card w-25 m-1" type="category">
                     <div class="card-body" style="text-align: center">
                             ${category.getName()}<br>
-                        <a href="${contextPath}/category?categoryId=${category.getId()}&categoryName=${category.getName()}">
+                        <a href="/eshop?command=category&categoryId=${category.getId()}&nameCategory=${category.getName()}">
                             <img class="card-img" style="width:150px;height:120px"
                                  src="${contextPath}/images/${category.getImageName()}" alt="Card image"></a>
                     </div>

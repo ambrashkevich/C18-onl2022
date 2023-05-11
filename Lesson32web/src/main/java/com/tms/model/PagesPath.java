@@ -1,20 +1,21 @@
 package com.tms.model;
 
 public enum PagesPath {
+    PROFILE_PAGE("profile.jsp"),
     HOME_PAGE("home.jsp"),
-    PRODUCT_PAGE("product.jsp"),
-    SIGN_PAGE("signin.jsp"),
     CART_PAGE("cart.jsp"),
-    CATEGORY_PAGE("category.jsp"),
-    PROFILE_PAGE("profile.jsp");
+    SIGN_IN_PAGE("signin.jsp"),
+    PRODUCT_PAGE("product.jsp"),
+    CATEGORY_PAGE("category.jsp");
 
     private final String path;
-
-    public String getPath() {
-        return path;
-    }
 
     PagesPath(String path) {
         this.path = path;
     }
+
+    public String getPath() {
+        return path;
+    }
 }
+

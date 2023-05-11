@@ -5,6 +5,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <style>
-      <%@include file="styles/style.css"%>
+<%--      <%@include file="styles/style.css"%>--%>
     Включение в страницу JSP дополнительных статических и динамических ресурсов
 </style>

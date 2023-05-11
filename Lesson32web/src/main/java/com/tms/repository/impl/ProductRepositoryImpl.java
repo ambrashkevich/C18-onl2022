@@ -1,8 +1,9 @@
-package com.tms.repository;
+package com.tms.repository.impl;
 
 import static com.tms.util.ProductHelper.products;
 
 import com.tms.model.Product;
+import com.tms.repository.ProductRepository;
 import java.util.List;
 
 public class ProductRepositoryImpl implements ProductRepository {
