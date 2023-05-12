@@ -3,10 +3,13 @@ package com.tms.util;
 import static com.tms.util.InjectObjectsFactory.createAndInjectInstances;
 
 import com.tms.controller.BaseCommandController;
+import com.tms.controller.CartController;
+import com.tms.controller.CartPostController;
 import com.tms.controller.CategoryController;
 import com.tms.controller.HomeController;
 import com.tms.controller.LogoutController;
 import com.tms.controller.ProductController;
+import com.tms.controller.ProfileController;
 import com.tms.model.Command;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -27,9 +30,9 @@ public class CommandControllerFactory {
             case LOGOUT_COMMAND -> LogoutController::new;
             case PRODUCT_COMMAND -> ProductController::new;
             case CATEGORY_COMMAND -> CategoryController::new;
-//            case PROFILE_COMMAND -> ProfileController::new;
-//            case SHOPPING_CART_POST_COMMAND -> CartPostController::new;
-//
+            case PROFILE_COMMAND -> ProfileController::new;
+            case SHOPPING_CART_POST_COMMAND -> CartPostController::new;
+            case CART_COMMAND -> CartController::new;
             case HOME_COMMAND -> HomeController::new;
         };
     }

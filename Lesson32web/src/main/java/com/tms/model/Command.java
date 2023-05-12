@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Optional;
 
 public enum Command {
-    //    PROFILE_COMMAND("profile"),
-//    SHOPPING_CART_POST_COMMAND("cart-post"),
-//    CART_COMMAND("cart"),
+    PROFILE_COMMAND("profile"),
+    SHOPPING_CART_POST_COMMAND("cart-post"),
+    CART_COMMAND("cart"),
     HOME_COMMAND("home"),
     PRODUCT_COMMAND("product"),
     CATEGORY_COMMAND("category"),
