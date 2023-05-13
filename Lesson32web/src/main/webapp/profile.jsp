@@ -13,7 +13,7 @@
 <br>
 <h3 class="text-center">Добро пожаловать, <b class="font-italic">${username.getName()}</b>!</h3>
 <p class="text-center">Ваш пароль: <b class="font-italic">${username.getPassword()}</b></p>
-<button onclick="window.location.href = 'logout';" class="buttonQuit">
+<button onclick="window.location.href = '<c:url value="/eshop?command=logout"/>';" class="buttonQuit">
     <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Выйти
 </button>
 </body>

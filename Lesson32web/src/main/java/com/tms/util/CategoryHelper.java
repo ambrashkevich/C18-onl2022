@@ -2,7 +2,9 @@ package com.tms.util;
 
 import com.tms.model.Category;
 import java.util.List;
+import lombok.experimental.UtilityClass;
 
+@UtilityClass
 public class CategoryHelper {
 
     public static final List<Category> categories = List.of(

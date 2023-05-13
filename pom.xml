@@ -25,7 +25,6 @@
         <spring-context.version>6.0.7</spring-context.version>
         <spring-core.version>6.0.7</spring-core.version>
         <spring-beans.version>6.0.7</spring-beans.version>
-        <spring-context.version>6.0.7</spring-context.version>
     </properties>
 
     <dependencies>
