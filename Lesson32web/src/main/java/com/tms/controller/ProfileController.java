@@ -20,4 +20,3 @@ public class ProfileController implements BaseCommandController {
         }
     }
 }
-
