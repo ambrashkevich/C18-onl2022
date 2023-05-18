@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <jsp:include page="header.jsp"/>
     <jsp:include page="libs.jsp"/>
-    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="../../styles/profile.css">
 </head>
 <body>
 <br>

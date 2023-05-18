@@ -24,7 +24,4 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>Lesson32web</finalName>
-    </build>
 </project>

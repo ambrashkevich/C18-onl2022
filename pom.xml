@@ -23,8 +23,8 @@
         <pmd.maven.plugin.version>3.14.0</pmd.maven.plugin.version>
         <pmd.version>6.11.0</pmd.version>
         <spring-context.version>6.0.7</spring-context.version>
-        <spring-core.version>6.0.7</spring-core.version>
-        <spring-beans.version>6.0.7</spring-beans.version>
+        <spring-core.version>6.0.9</spring-core.version>
+        <spring-beans.version>6.0.9</spring-beans.version>
     </properties>
 
     <dependencies>
@@ -232,7 +232,8 @@
         <module>Lesson30web</module>
         <module>Lesson31pattern</module>
         <module>Lesson32web</module>
-        <module>Lesson36</module>
         <module>Lesson33shop</module>
+        <module>Lesson36</module>
+        <module>Lesson37_1</module>
     </modules>
 </project>
