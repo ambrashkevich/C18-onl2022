@@ -11,8 +11,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ConnectionPool {
 
-    // private final static Logger log = LoggerFactory.getLogger(ConnectionPool.class);
-    //Singleton instance
     private static volatile ConnectionPool instance;
 
     //Configuration properties

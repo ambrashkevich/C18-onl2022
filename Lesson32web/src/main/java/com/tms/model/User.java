@@ -15,8 +15,8 @@ import lombok.ToString;
 public class User implements Serializable {
 
     private String name;
-    //    private String surname;
+//    private String surname;
     private String password;
 //    private String email;
-//    private LocalDate birthDay;
+//    private Date birthDay;
 }

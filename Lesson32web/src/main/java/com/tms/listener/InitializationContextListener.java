@@ -1,12 +1,13 @@
 package com.tms.listener;
 
-import com.tms.model.Command;
+import com.tms.config.BeanConfig;
 import com.tms.repository.util.ConnectionPool;
-import com.tms.util.CommandControllerFactory;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @WebListener
 @Slf4j
@@ -17,13 +18,9 @@ public class InitializationContextListener implements ServletContextListener {
         log.info("InitializationContextListener start");
         ConnectionPool connectionPool = ConnectionPool.getInstance();
         sce.getServletContext().setAttribute("connectionPool", connectionPool);
-        for (Command command : Command.values()) {
-            try {
-                CommandControllerFactory.defineCommand(command);
-            } catch (Exception e) {
-                log.error("Can not put values in commands map", e);
-            }
-        }
+
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(BeanConfig.class);
+        sce.getServletContext().setAttribute("appContext", ctx);
     }
 
     @Override

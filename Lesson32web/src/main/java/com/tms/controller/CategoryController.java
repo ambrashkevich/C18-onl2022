@@ -2,31 +2,31 @@ package com.tms.controller;
 
 import static com.tms.model.PagesPath.CATEGORY_PAGE;
 import static com.tms.model.PagesPath.SIGN_IN_PAGE;
-import static com.tms.util.Utils.isUserLogIn;
 
 import com.tms.model.Category;
-import com.tms.model.Inject;
 import com.tms.model.PagesPath;
 import com.tms.model.Product;
 import com.tms.model.User;
 import com.tms.service.CategoryService;
 import com.tms.service.ProductService;
+import com.tms.util.Constants;
+import com.tms.util.Utils;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
-import lombok.Setter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
-@Setter
+@Controller(Constants.CATEGORY_COMMAND)
+@RequiredArgsConstructor
 public class CategoryController implements BaseCommandController {
 
-    @Inject
-    private CategoryService categoryService;
-    @Inject
-    private ProductService productService;
+    private final CategoryService categoryService;
+    private final ProductService productService;
 
     @Override
     public PagesPath execute(HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("username");
-        if (isUserLogIn(user)) {
+        if (Utils.isUserLogIn(user)) {
             List<Category> categories = categoryService.getCategories();
             request.setAttribute("categories", categories);
             int categoryId = Integer.parseInt(request.getParameter("categoryId"));
