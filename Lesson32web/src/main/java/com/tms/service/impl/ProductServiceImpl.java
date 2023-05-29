@@ -1,16 +1,18 @@
-package com.tms.service;
+package com.tms.service.impl;
 
-import com.tms.model.Inject;
+
 import com.tms.model.Product;
 import com.tms.repository.ProductRepository;
+import com.tms.service.ProductService;
 import java.util.List;
-import lombok.Setter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
-@Setter
+@Service
+@RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
 
-    @Inject
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public List<Product> getProducts() {
         return productRepository.getProducts();

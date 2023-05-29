@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <jsp:include page="header.jsp"/>
     <jsp:include page="libs.jsp"/>
-    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="../../styles/profile.css">
 </head>
 <body>
 <br>
@@ -27,7 +27,7 @@
             </div>
             <div class="col" style="background-color:white;">
                 <p><b class="font-italic">Модель:</b> ${myProduct.getName()}</p>
-                    <%--                <p><b class="font-italic">Описание:</b> ${myProduct.getDescription()}</p>--%>
+                <p><b class="font-italic">Описание:</b> ${myProduct.getDescription()}</p>
                 <p><b class="font-italic">Цена:</b> ${myProduct.getPrice()} руб.</p>
                 <form method="post" accept-charset="UTF-8" action="${pageContext.request.contextPath}/eshop?command=cart-post">
                     <input type="hidden" value="${myProduct.getId()}" name="id"/>

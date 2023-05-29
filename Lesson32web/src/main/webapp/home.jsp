@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <jsp:include page="libs.jsp"/>
     <jsp:include page="header.jsp"/>
-    <jsp:include page="footer.jsp"/>
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
@@ -39,7 +39,6 @@
             </c:forEach>
         </div>
     </c:if>
-</div>
 </div>
 </body>
 </html>

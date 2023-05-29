@@ -1,15 +1,16 @@
 package com.tms.controller;
 
-import static com.tms.model.PagesPath.CART_PAGE;
-import static com.tms.model.PagesPath.PRODUCT_PAGE;
 
 import com.tms.model.Cart;
 import com.tms.model.PagesPath;
 import com.tms.model.Product;
+import com.tms.util.Constants;
 import java.math.BigDecimal;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
 
+@Controller(Constants.SHOPPING_CART_POST_COMMAND)
 public class CartPostController implements BaseCommandController {
 
     @Override
@@ -31,16 +32,15 @@ public class CartPostController implements BaseCommandController {
                 cart.addProduct(product);
                 session.setAttribute("myProducts", cart.getProducts());
                 request.setAttribute("oneProduct", product);
-                path = PRODUCT_PAGE;
+                path = PagesPath.PRODUCT_PAGE;
             }
             case "Delete" -> {
                 cart.deleteProduct(product);
                 session.setAttribute("myProducts", cart.getProducts());
-                path = CART_PAGE;
+                path = PagesPath.CART_PAGE;
             }
             default -> System.out.println("Такой кнопки нет");
         }
         return path;
     }
 }
-
