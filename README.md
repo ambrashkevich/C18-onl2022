@@ -3,8 +3,6 @@
 <h4 align="center">Topics covered and what I learned</h4>
 
 
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/trossp)
-
 | #      | Lesson                        | Description | Homework theme |
 |--------|-------------------------------|-------------|----------------|
 | 1      | Introductory lesson           |    introduction to java, overview of the distinctive principles of the programming language         | creating modules, classes, an overview of the logic using the example of reading numbers from the console               |
